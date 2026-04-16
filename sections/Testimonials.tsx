@@ -11,7 +11,7 @@ const testimonials = [
     lokasi: 'Jakarta Selatan',
     tanggal: 'Oktober 2024',
     quote:
-      'Dinata Organizer benar-benar mengubah cara kami melihat proses pernikahan. Awalnya kami pikir akan sangat stres, tapi dengan Tim Dinata, setiap langkah terasa menyenangkan. Hari H kami — sempurna. Tidak ada satu hal pun yang salah.',
+      'Dinata Organizer benar-benar mengubah cara kami melihat proses pernikahan. Awalnya kami pikir akan sangat stres, tapi dengan Tim Dinata, setiap langkah terasa menyenangkan.',
     rating: 5,
     initials: 'A&R',
     color: '#C8A96E',
@@ -22,7 +22,7 @@ const testimonials = [
     lokasi: 'Tangerang',
     tanggal: 'Agustus 2024',
     quote:
-      'Yang paling kami hargai adalah kejujuran mereka soal anggaran. Tidak ada kejutan biaya di akhir. Planner kami, Mbak Dina, benar-benar mendengarkan apa yang kami mau dan mewujudkannya dengan indah. Highly recommended!',
+      'Yang paling kami hargai adalah kejujuran mereka soal anggaran. Tidak ada kejutan biaya di akhir. Highly recommended!',
     rating: 5,
     initials: 'S&B',
     color: '#1B3A2E',
@@ -33,7 +33,7 @@ const testimonials = [
     lokasi: 'Bekasi',
     tanggal: 'Juni 2024',
     quote:
-      'Kami sempat ragu karena budget terbatas, tapi Dinata Organizer membantu kami mendapatkan pernikahan impian dalam budget yang ada. Kreativitas mereka luar biasa. Semua tamu bilang dekorasi kami paling cantik yang pernah mereka lihat.',
+      'Kami sempat ragu karena budget terbatas, tapi Dinata Organizer membantu kami mendapatkan pernikahan impian dalam budget yang ada.',
     rating: 5,
     initials: 'P&F',
     color: '#8B6914',
@@ -44,9 +44,75 @@ const testimonials = [
     lokasi: 'Depok',
     tanggal: 'April 2024',
     quote:
-      'Dari pertama konsultasi sudah terasa berbeda. Mereka tidak langsung menawarkan paket, tapi benar-benar bertanya tentang kami. 6 bulan persiapan bersama mereka sangat smooth. Hari H kami menangis bahagia — semua sesuai impian.',
+      'Dari pertama konsultasi sudah terasa berbeda. Mereka tidak langsung menawarkan paket, tapi benar-benar bertanya tentang kami.',
     rating: 5,
     initials: 'M&D',
+    color: '#C8A96E',
+  },
+  {
+    id: 5,
+    nama: 'Rina & Andi',
+    lokasi: 'Bogor',
+    tanggal: 'Maret 2024',
+    quote:
+      'Tim Dinata sangat profesional dan detail. Semua vendor terkoordinasi dengan baik, kami tinggal hadir dan menikmati.',
+    rating: 5,
+    initials: 'R&A',
+    color: '#1B3A2E',
+  },
+  {
+    id: 6,
+    nama: 'Dewi & Arif',
+    lokasi: 'Jakarta Timur',
+    tanggal: 'Februari 2024',
+    quote:
+      'Dekorasi yang mereka buat melebihi ekspektasi kami. Semua tamu kagum dengan konsep pernikahan kami.',
+    rating: 5,
+    initials: 'D&A',
+    color: '#8B6914',
+  },
+  {
+    id: 7,
+    nama: 'Lina & Hendra',
+    lokasi: 'Cibubur',
+    tanggal: 'Januari 2024',
+    quote:
+      'Komunikasi yang sangat baik sepanjang proses. Setiap pertanyaan kami dijawab dengan cepat dan jelas.',
+    rating: 5,
+    initials: 'L&H',
+    color: '#C8A96E',
+  },
+  {
+    id: 8,
+    nama: 'Fitri & Bayu',
+    lokasi: 'BSD',
+    tanggal: 'Desember 2023',
+    quote:
+      'Hari H berjalan lancar tanpa hambatan. Tim Dinata handle semuanya dengan sempurna dari pagi sampai malam.',
+    rating: 5,
+    initials: 'F&B',
+    color: '#1B3A2E',
+  },
+  {
+    id: 9,
+    nama: 'Nadia & Rizky',
+    lokasi: 'Serpong',
+    tanggal: 'November 2023',
+    quote:
+      'Wedding planner yang benar-benar mendengarkan. Setiap detail kecil diperhatikan dengan seksama.',
+    rating: 5,
+    initials: 'N&R',
+    color: '#8B6914',
+  },
+  {
+    id: 10,
+    nama: 'Citra & Wahyu',
+    lokasi: 'Jakarta Barat',
+    tanggal: 'Oktober 2023',
+    quote:
+      'Terima kasih Dinata Organizer sudah mewujudkan pernikahan impian kami. Best decision ever!',
+    rating: 5,
+    initials: 'C&W',
     color: '#C8A96E',
   },
 ]
@@ -61,13 +127,20 @@ function Stars({ count }: { count: number }) {
   )
 }
 
+// Split testimonials into slides of 5 for desktop
+const desktopSlides = [testimonials.slice(0, 5), testimonials.slice(5, 10)]
+
 export default function Testimonials() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
-  const [active, setActive] = useState(0)
+  const [desktopActive, setDesktopActive] = useState(0)
+  const [mobileActive, setMobileActive] = useState(0)
 
-  const prev = () => setActive((a) => (a === 0 ? testimonials.length - 1 : a - 1))
-  const next = () => setActive((a) => (a === testimonials.length - 1 ? 0 : a + 1))
+  const prevDesktop = () => setDesktopActive((a) => (a === 0 ? desktopSlides.length - 1 : a - 1))
+  const nextDesktop = () => setDesktopActive((a) => (a === desktopSlides.length - 1 ? 0 : a + 1))
+
+  const prevMobile = () => setMobileActive((a) => (a === 0 ? testimonials.length - 1 : a - 1))
+  const nextMobile = () => setMobileActive((a) => (a === testimonials.length - 1 ? 0 : a + 1))
 
   return (
     <section
@@ -98,160 +171,151 @@ export default function Testimonials() {
           </h2>
         </motion.div>
 
-        {/* Desktop: 2-col grid with featured */}
-        <div className="hidden lg:grid grid-cols-3 gap-6">
-          {/* Large featured card */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="col-span-1 bg-[#1B3A2E] rounded-3xl p-8 flex flex-col justify-between"
-          >
-            {/* Quote mark */}
-            <div
-              className="font-cormorant text-[#C8A96E]/40 text-8xl leading-none mb-4 -mt-4"
-              aria-hidden="true"
-              style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
-            >
-              &ldquo;
-            </div>
-            <Stars count={testimonials[0].rating} />
-            <p
-              className="font-cormorant text-[#FAF8F4] text-xl font-medium leading-relaxed mt-4 mb-6 italic flex-1"
-              style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
-            >
-              {testimonials[0].quote}
-            </p>
-            <div className="flex items-center gap-3">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-white font-cormorant font-semibold text-sm"
-                style={{ backgroundColor: testimonials[0].color }}
-              >
-                {testimonials[0].initials}
-              </div>
-              <div>
-                <p
-                  className="text-[#FAF8F4] font-dm font-medium text-sm"
-                  style={{ fontFamily: 'DM Sans, sans-serif' }}
-                >
-                  {testimonials[0].nama}
-                </p>
-                <p
-                  className="text-[#FAF8F4]/50 font-dm text-xs"
-                  style={{ fontFamily: 'DM Sans, sans-serif' }}
-                >
-                  {testimonials[0].lokasi} · {testimonials[0].tanggal}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right 3 cards stacked */}
-          <div className="col-span-2 grid grid-cols-2 gap-6">
-            {testimonials.slice(1).map((t, i) => (
-              <motion.div
-                key={t.id}
-                initial={{ opacity: 0, y: 32 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.15 + i * 0.1 }}
-                className="bg-white border border-[#E8DDD5] rounded-3xl p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300"
-              >
-                <div>
-                  <Stars count={t.rating} />
-                  <p
-                    className="font-cormorant text-[#1B3A2E] text-lg font-medium leading-relaxed mt-3 mb-4 italic"
-                    style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
-                  >
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 pt-3 border-t border-[#E8DDD5]">
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-white font-cormorant font-semibold text-xs"
-                    style={{ backgroundColor: t.color }}
-                  >
-                    {t.initials}
-                  </div>
-                  <div>
-                    <p
-                      className="text-[#1B3A2E] font-dm font-medium text-sm"
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
-                    >
-                      {t.nama}
-                    </p>
-                    <p
-                      className="text-[#888] font-dm text-xs"
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
-                    >
-                      {t.lokasi} · {t.tanggal}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile: Slider */}
-        <div className="lg:hidden">
+        {/* Desktop: 5 cards per slide */}
+        <div className="hidden lg:block">
           <AnimatePresence mode="wait">
             <motion.div
-              key={active}
+              key={desktopActive}
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.4 }}
-              className="bg-white border border-[#E8DDD5] rounded-3xl p-7"
+              className="grid grid-cols-5 gap-4"
             >
-              <Stars count={testimonials[active].rating} />
-              <p
-                className="font-cormorant text-[#1B3A2E] text-xl font-medium leading-relaxed mt-4 mb-6 italic"
-                style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
-              >
-                &ldquo;{testimonials[active].quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
+              {desktopSlides[desktopActive].map((t) => (
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-cormorant font-semibold text-sm"
-                  style={{ backgroundColor: testimonials[active].color }}
+                  key={t.id}
+                  className="bg-white border border-[#E8DDD5] rounded-2xl p-5 flex flex-col justify-between hover:shadow-md transition-shadow duration-300"
                 >
-                  {testimonials[active].initials}
+                  <div>
+                    <Stars count={t.rating} />
+                    <p
+                      className="font-cormorant text-[#1B3A2E] text-sm font-medium leading-relaxed mt-3 mb-4 italic line-clamp-4"
+                      style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+                    >
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 pt-3 border-t border-[#E8DDD5]">
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center text-white font-cormorant font-semibold text-xs flex-shrink-0"
+                      style={{ backgroundColor: t.color }}
+                    >
+                      {t.initials}
+                    </div>
+                    <div className="min-w-0">
+                      <p
+                        className="text-[#1B3A2E] font-dm font-medium text-xs truncate"
+                        style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      >
+                        {t.nama}
+                      </p>
+                      <p
+                        className="text-[#888] font-dm text-[10px] truncate"
+                        style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      >
+                        {t.lokasi}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p
-                    className="text-[#1B3A2E] font-dm font-medium text-sm"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
-                  >
-                    {testimonials[active].nama}
-                  </p>
-                  <p
-                    className="text-[#888] font-dm text-xs"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
-                  >
-                    {testimonials[active].lokasi} · {testimonials[active].tanggal}
-                  </p>
-                </div>
-              </div>
+              ))}
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-6">
+          {/* Desktop Navigation */}
+          <div className="flex items-center justify-center gap-4 mt-8">
             <button
-              onClick={prev}
+              onClick={prevDesktop}
               className="w-10 h-10 rounded-full border border-[#E0D8D0] flex items-center justify-center hover:bg-[#1B3A2E] hover:border-[#1B3A2E] hover:text-white transition-all text-[#1B3A2E]"
               aria-label="Previous"
             >
               <ChevronLeft size={16} />
             </button>
             <div className="flex gap-2">
+              {desktopSlides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setDesktopActive(i)}
+                  className={`transition-all duration-300 rounded-full ${
+                    i === desktopActive
+                      ? 'w-6 h-2 bg-[#C8A96E]'
+                      : 'w-2 h-2 bg-[#E0D8D0]'
+                  }`}
+                  aria-label={`Slide ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={nextDesktop}
+              className="w-10 h-10 rounded-full border border-[#E0D8D0] flex items-center justify-center hover:bg-[#1B3A2E] hover:border-[#1B3A2E] hover:text-white transition-all text-[#1B3A2E]"
+              aria-label="Next"
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile: 1 card per slide */}
+        <div className="lg:hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={mobileActive}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -40 }}
+              transition={{ duration: 0.4 }}
+              className="bg-white border border-[#E8DDD5] rounded-3xl p-7"
+            >
+              <Stars count={testimonials[mobileActive].rating} />
+              <p
+                className="font-cormorant text-[#1B3A2E] text-xl font-medium leading-relaxed mt-4 mb-6 italic"
+                style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+              >
+                &ldquo;{testimonials[mobileActive].quote}&rdquo;
+              </p>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-cormorant font-semibold text-sm"
+                  style={{ backgroundColor: testimonials[mobileActive].color }}
+                >
+                  {testimonials[mobileActive].initials}
+                </div>
+                <div>
+                  <p
+                    className="text-[#1B3A2E] font-dm font-medium text-sm"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    {testimonials[mobileActive].nama}
+                  </p>
+                  <p
+                    className="text-[#888] font-dm text-xs"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    {testimonials[mobileActive].lokasi} · {testimonials[mobileActive].tanggal}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Mobile Navigation */}
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <button
+              onClick={prevMobile}
+              className="w-10 h-10 rounded-full border border-[#E0D8D0] flex items-center justify-center hover:bg-[#1B3A2E] hover:border-[#1B3A2E] hover:text-white transition-all text-[#1B3A2E]"
+              aria-label="Previous"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <div className="flex gap-1.5 flex-wrap justify-center max-w-[200px]">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setActive(i)}
+                  onClick={() => setMobileActive(i)}
                   className={`transition-all duration-300 rounded-full ${
-                    i === active
-                      ? 'w-6 h-2 bg-[#C8A96E]'
+                    i === mobileActive
+                      ? 'w-4 h-2 bg-[#C8A96E]'
                       : 'w-2 h-2 bg-[#E0D8D0]'
                   }`}
                   aria-label={`Testimoni ${i + 1}`}
@@ -259,7 +323,7 @@ export default function Testimonials() {
               ))}
             </div>
             <button
-              onClick={next}
+              onClick={nextMobile}
               className="w-10 h-10 rounded-full border border-[#E0D8D0] flex items-center justify-center hover:bg-[#1B3A2E] hover:border-[#1B3A2E] hover:text-white transition-all text-[#1B3A2E]"
               aria-label="Next"
             >

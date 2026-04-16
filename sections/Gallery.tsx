@@ -8,32 +8,18 @@ const galleryImages = [
   {
     src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=90',
     alt: 'Dekorasi pernikahan elegan karya Dinata Organizer',
-    className: 'row-span-2',
   },
   {
     src: 'https://images.unsplash.com/photo-1561781482-1b4a64b95c16?w=600&q=90',
     alt: 'Momen romantis pasangan pengantin',
-    className: '',
   },
   {
     src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=90',
     alt: 'Resepsi pernikahan berkelas',
-    className: '',
   },
   {
     src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=90',
     alt: 'Venue pernikahan yang cantik',
-    className: 'row-span-2',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1503428593586-e225b39bde42?w=600&q=90',
-    alt: 'Detail bunga dan dekorasi pernikahan',
-    className: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=90',
-    alt: 'Momen bahagia pernikahan',
-    className: '',
   },
 ]
 
@@ -77,22 +63,22 @@ export default function Gallery() {
           </p>
         </motion.div>
 
-        {/* Masonry Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-4 gap-3 md:gap-4 auto-rows-[200px]">
+        {/* Grid 2x2 */}
+        <div className="grid grid-cols-2 gap-4 md:gap-6">
           {galleryImages.map((img, i) => (
             <motion.div
               key={img.src}
               initial={{ opacity: 0, scale: 0.96 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.08 * i }}
-              className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.className}`}
+              className="relative overflow-hidden rounded-2xl group cursor-pointer aspect-[4/3]"
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, 33vw"
+                sizes="(max-width: 768px) 50vw, 50vw"
               />
               {/* Overlay on hover */}
               <div className="absolute inset-0 bg-[#1B3A2E]/0 group-hover:bg-[#1B3A2E]/30 transition-all duration-500" />

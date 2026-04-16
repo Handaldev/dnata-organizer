@@ -30,7 +30,7 @@ export default function IntroSolution() {
     <section
       id="layanan"
       ref={ref}
-      className="py-24 lg:py-36 bg-[#FAF8F4] overflow-hidden"
+      className="py-24 lg:py-36 bg-[#F5EDE8] overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Top label */}
@@ -69,7 +69,7 @@ export default function IntroSolution() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-center text-[#5a5a5a] text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
+          className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           Kami tidak percaya pada pernikahan yang&nbsp;"satu ukuran untuk semua".
@@ -138,7 +138,7 @@ export default function IntroSolution() {
                     {p.title}
                   </h3>
                   <p
-                    className="text-[#5a5a5a] text-sm font-dm leading-relaxed"
+                    className="text-[#1B3A2E]/70 text-sm font-dm leading-relaxed"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {p.desc}

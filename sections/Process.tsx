@@ -50,7 +50,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
   return (
     <div
       ref={ref}
-      className="min-h-screen flex items-center py-24 sticky top-0"
+      className="min-h-screen flex items-center py-24 sticky top-0 bg-[#FAF8F4]"
     >
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
