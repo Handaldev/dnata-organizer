@@ -48,7 +48,7 @@ export default function CTASection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left — Copy */}
           <motion.div

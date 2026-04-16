@@ -29,7 +29,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto px-6 pt-28 pb-20 w-full">
+      <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Column */}
           <div className="order-2 lg:order-1">
