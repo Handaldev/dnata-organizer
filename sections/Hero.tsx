@@ -58,10 +58,10 @@ export default function Hero() {
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
               Satu{' '}
-              <em className="italic font-bold text-[#C8A96E]">Planner</em>
+              <em className="italic font-extrabold text-[#C8A96E]">Planner</em>
               <br />
               Satu{' '}
-              <em className="italic font-bold text-[#C8A96E]">Fokus</em>
+              <em className="italic font-extrabold text-[#C8A96E]">Fokus</em>
               <br />
               Anda Tinggal{' '}
               <br className="hidden sm:block" />
