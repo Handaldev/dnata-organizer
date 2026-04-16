@@ -160,16 +160,27 @@ export default function Testimonials() {
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Social Proof
+            Kata Mereka
           </p>
           <h2
             className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Apa Kata Mereka{' '}
-            <em className="italic text-[#C8A96E]">yang Sudah Pakai?</em>
+            Bukan Janji{' '}
+            <em className="italic text-[#C8A96E]">Ini Hasil Nyatanya</em>
           </h2>
         </motion.div>
+
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
+          style={{ fontFamily: 'DM Sans, sans-serif' }}
+        >
+          200+ pasangan sudah buktikan. Ini sebagian dari cerita mereka.
+        </motion.p>
 
         {/* Desktop: 5 cards per slide */}
         <div className="hidden lg:block">
@@ -237,11 +248,10 @@ export default function Testimonials() {
                 <button
                   key={i}
                   onClick={() => setDesktopActive(i)}
-                  className={`transition-all duration-300 rounded-full ${
-                    i === desktopActive
-                      ? 'w-6 h-2 bg-[#C8A96E]'
-                      : 'w-2 h-2 bg-[#E0D8D0]'
-                  }`}
+                  className={`transition-all duration-300 rounded-full ${i === desktopActive
+                    ? 'w-6 h-2 bg-[#C8A96E]'
+                    : 'w-2 h-2 bg-[#E0D8D0]'
+                    }`}
                   aria-label={`Slide ${i + 1}`}
                 />
               ))}
@@ -313,11 +323,10 @@ export default function Testimonials() {
                 <button
                   key={i}
                   onClick={() => setMobileActive(i)}
-                  className={`transition-all duration-300 rounded-full ${
-                    i === mobileActive
-                      ? 'w-4 h-2 bg-[#C8A96E]'
-                      : 'w-2 h-2 bg-[#E0D8D0]'
-                  }`}
+                  className={`transition-all duration-300 rounded-full ${i === mobileActive
+                    ? 'w-4 h-2 bg-[#C8A96E]'
+                    : 'w-2 h-2 bg-[#E0D8D0]'
+                    }`}
                   aria-label={`Testimoni ${i + 1}`}
                 />
               ))}
