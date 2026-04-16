@@ -18,9 +18,19 @@ const pillars = [
     desc: 'Dari riset vendor, negosiasi harga, sampai koordinasi hari H — semua kami yang urus. Kamu tinggal approve..',
   },
   {
+    icon: <NotebookPen className="w-5 h-5 text-[#C8A96E]" />,
+    title: 'Ingat Setiap Detail Kamu',
+    desc: 'Dari preferensi warna, pantangan makanan tamu, sampai momen kecil yang pengen kamu abadikan — semua kami catat dan kami eksekusi tanpa kamu perlu ingatkan dua kali.',
+  },
+  {
     icon: <UserCheck className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Satu PIC Dedicated',
     desc: 'Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
+  },
+  {
+    icon: <Network className="w-5 h-5 text-[#C8A96E]" />,
+    title: 'Vendor Network Eksklusif',
+    desc: '7 tahun di industri ini, kami punya akses ke vendor-vendor terbaik yang tidak semua orang tahu — dengan harga yang sudah kami negosiasikan khusus untuk klien kami.Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
   },
   {
     icon: <Wallet className="w-5 h-5 text-[#C8A96E]" />,
