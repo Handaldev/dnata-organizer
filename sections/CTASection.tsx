@@ -71,16 +71,16 @@ export default function CTASection() {
               className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#FAF8F4] leading-tight mb-6"
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
-              Siap Wujudkan{' '}
-              <em className="italic text-[#C8A96E]">Pernikahan Impian</em>{' '}
-              Tanpa Ribet?
+              Cek Apakah{' '}
+              <em className="italic text-[#C8A96E]">Tanggal Kamu</em>{' '}
+              Masih Tersedia?
             </h2>
 
             <p
               className="text-[#FAF8F4]/70 text-base font-dm leading-relaxed mb-8"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Isi form sekarang dan dapatkan pricing list + konsultasi{' '}
+              Kami hanya handle 4 pernikahan per bulan — supaya setiap klien dapat yang terbaik dari kami. Beberapa tanggal bulan ini sudah terisi. Isi form sekarang untuk cek ketersediaan dan konsultasi{' '}
               <strong className="text-[#C8A96E]">GRATIS</strong>. Tim kami
               akan hubungi Anda dalam 1x24 jam untuk diskusi kebutuhan.
             </p>
