@@ -72,9 +72,7 @@ export default function IntroSolution() {
           className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Dinata Organizer adalah partner pernikahan yang akan handle semua
-          kerumitan untuk Anda. Dari konsep sampai eksekusi, kami pastikan
-          setiap detail sempurna — sesuai visi Anda, sesuai budget Anda.
+          Kami tidak ambil 10 klien sekaligus lalu urus seadanya. Anda dapat 1 personal planner yang hanya fokus pada pernikahan Anda — kami tahu nama tamu VIP Anda, preferensi katering Anda, bahkan lagu pertama yang Anda inginkan.
         </motion.p>
 
         {/* Split layout */}
