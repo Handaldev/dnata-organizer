@@ -60,6 +60,9 @@ export default function Hero() {
               Satu{' '}
               <em className="italic text-[#C8A96E]">Planner</em>
               <br />
+              Satu{' '}
+              <em className="italic text-[#C8A96E]">Fokus</em>
+              <br />
               Anda Tinggal{' '}
               <br className="hidden sm:block" />
               Hadir & Bahagia
