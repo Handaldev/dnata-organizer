@@ -49,7 +49,7 @@ export default function IntroSolution() {
       ref={ref}
       className="py-24 lg:py-36 bg-[#F5EDE8] overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Top label */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -70,7 +70,7 @@ export default function IntroSolution() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-center max-w-3xl mx-auto mb-6"
+          className="text-center max-w-4xl mx-auto mb-6"
         >
           <h2
             className="font-cormorant text-4xl lg:text-6xl font-semibold text-[#1B3A2E] leading-tight"
@@ -85,7 +85,7 @@ export default function IntroSolution() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
+          className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-4xl mx-auto mb-20 font-dm"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           WO biasa urus banyak klien sekaligus, kamu cuma satu dari sekian klien.

@@ -36,7 +36,7 @@ export default function Problem() {
       ref={ref}
       className="py-24 lg:py-32 bg-[#1B3A2E]"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
