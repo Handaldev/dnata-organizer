@@ -65,7 +65,7 @@ export default function Hero() {
               <em className="italic font-extrabold text-[#C8A96E]">Fokus</em>
               .{' '}
               <br />
-              <em className="italic font-extrabold text-[#C8A96E]">Wujudkan Pernikahan Impian Anda</em>
+              Pernikahan Impian Anda{' '}
             </motion.h1>
 
             {/* Sub */}
