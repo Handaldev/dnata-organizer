@@ -13,7 +13,7 @@ import {
 
 const pillars = [
   {
-    icon: '✦',
+    icon: <Shuffle className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Full Handle dari A-Z',
     desc: 'Dari riset vendor, negosiasi harga, sampai koordinasi hari H — semua kami yang urus. Kamu tinggal approve..',
   },
