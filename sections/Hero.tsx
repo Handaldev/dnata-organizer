@@ -63,9 +63,7 @@ export default function Hero() {
               Satu{' '}
               <em className="italic font-extrabold text-[#C8A96E]">Fokus</em>
               <br />
-              Anda Tinggal{' '}
-              <br className="hidden sm:block" />
-              Hadir & Bahagia
+              <em className="italic font-extrabold text-[#C8A96E]">Wujudkan Pernikahan Impian Anda</em>
             </motion.h1>
 
             {/* Sub */}
