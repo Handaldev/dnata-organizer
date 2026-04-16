@@ -11,7 +11,7 @@ const testimonials = [
     lokasi: 'Jakarta Selatan',
     tanggal: 'Oktober 2024',
     quote:
-      'Dinata Organizer benar-benar mengubah cara kami melihat proses pernikahan. Awalnya kami pikir akan sangat stres, tapi dengan Tim Dinata, setiap langkah terasa menyenangkan.',
+      'Awalnya kami mau handle sendiri, tapi setelah 2 bulan stress luar biasa, akhirnya pakai Dinata. Best decision! Semuanya jadi smooth dan kami bisa fokus kerja.',
     rating: 5,
     initials: 'A&R',
     color: '#C8A96E',
@@ -22,7 +22,7 @@ const testimonials = [
     lokasi: 'Tangerang',
     tanggal: 'Agustus 2024',
     quote:
-      'Yang paling kami hargai adalah kejujuran mereka soal anggaran. Tidak ada kejutan biaya di akhir. Highly recommended!',
+      'Budget kami 50jt dan mereka berhasil kasih pernikahan yang kelihatan 100jt. Nego vendor nya jago banget!',
     rating: 5,
     initials: 'S&B',
     color: '#1B3A2E',
@@ -33,7 +33,7 @@ const testimonials = [
     lokasi: 'Bekasi',
     tanggal: 'Juni 2024',
     quote:
-      'Kami sempat ragu karena budget terbatas, tapi Dinata Organizer membantu kami mendapatkan pernikahan impian dalam budget yang ada.',
+      'Takut vendor kabur atau kualitas jelek? Sama Dinata gak perlu khawatir. Mereka punya network vendor trusted dan semua di-supervise.',
     rating: 5,
     initials: 'P&F',
     color: '#8B6914',
@@ -44,7 +44,7 @@ const testimonials = [
     lokasi: 'Depok',
     tanggal: 'April 2024',
     quote:
-      'Dari pertama konsultasi sudah terasa berbeda. Mereka tidak langsung menawarkan paket, tapi benar-benar bertanya tentang kami.',
+      'Yang bikin beda: mereka tanya dulu maunya kita apa, baru kasih proposal. Bukan langsung sodor paket kayak WO lain.',
     rating: 5,
     initials: 'M&D',
     color: '#C8A96E',
@@ -55,7 +55,7 @@ const testimonials = [
     lokasi: 'Bogor',
     tanggal: 'Maret 2024',
     quote:
-      'Tim Dinata sangat profesional dan detail. Semua vendor terkoordinasi dengan baik, kami tinggal hadir dan menikmati.',
+      'Hari H ada masalah AC venue mati. Tim Dinata handle tanpa kita tahu - begitu sadar, AC sudah nyala lagi. Lega banget!',
     rating: 5,
     initials: 'R&A',
     color: '#1B3A2E',
@@ -66,7 +66,7 @@ const testimonials = [
     lokasi: 'Jakarta Timur',
     tanggal: 'Februari 2024',
     quote:
-      'Dekorasi yang mereka buat melebihi ekspektasi kami. Semua tamu kagum dengan konsep pernikahan kami.',
+      'Mama mertua request ini itu, tim Dinata yang handle komunikasinya. Kami gak perlu ribet sama drama keluarga.',
     rating: 5,
     initials: 'D&A',
     color: '#8B6914',
@@ -77,7 +77,7 @@ const testimonials = [
     lokasi: 'Cibubur',
     tanggal: 'Januari 2024',
     quote:
-      'Komunikasi yang sangat baik sepanjang proses. Setiap pertanyaan kami dijawab dengan cepat dan jelas.',
+      'Update progress tiap minggu via WA. Gak perlu nanya-nanya, mereka proaktif kasih info. Profesional banget!',
     rating: 5,
     initials: 'L&H',
     color: '#C8A96E',
@@ -88,7 +88,7 @@ const testimonials = [
     lokasi: 'BSD',
     tanggal: 'Desember 2023',
     quote:
-      'Hari H berjalan lancar tanpa hambatan. Tim Dinata handle semuanya dengan sempurna dari pagi sampai malam.',
+      'Dari jam 6 pagi sampe jam 11 malam, tim Dinata standby terus. Kami tinggal senyum dan foto-foto.',
     rating: 5,
     initials: 'F&B',
     color: '#1B3A2E',
@@ -99,7 +99,7 @@ const testimonials = [
     lokasi: 'Serpong',
     tanggal: 'November 2023',
     quote:
-      'Wedding planner yang benar-benar mendengarkan. Setiap detail kecil diperhatikan dengan seksama.',
+      'Konsultasi pertama gratis dan gak ada pressure untuk langsung deal. Baru setelah yakin, baru kami lanjut.',
     rating: 5,
     initials: 'N&R',
     color: '#8B6914',
@@ -110,7 +110,7 @@ const testimonials = [
     lokasi: 'Jakarta Barat',
     tanggal: 'Oktober 2023',
     quote:
-      'Terima kasih Dinata Organizer sudah mewujudkan pernikahan impian kami. Best decision ever!',
+      'Sudah recommend ke 3 teman dan semuanya puas. Dinata memang the real deal untuk WO Jabodetabek!',
     rating: 5,
     initials: 'C&W',
     color: '#C8A96E',
@@ -160,14 +160,14 @@ export default function Testimonials() {
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Kata Mereka
+            Social Proof
           </p>
           <h2
             className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            200+ Pasangan Telah{' '}
-            <em className="italic text-[#C8A96E]">Mempercayai Kami</em>
+            Apa Kata Mereka{' '}
+            <em className="italic text-[#C8A96E]">yang Sudah Pakai?</em>
           </h2>
         </motion.div>
 

@@ -45,7 +45,7 @@ export default function Hero() {
                 className="text-[#1B3A2E] text-xs font-dm font-medium tracking-widest uppercase"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
-                7 Tahun Pengalaman · 200+ Klien
+                Dipercaya 200+ Pasangan Bahagia
               </span>
             </motion.div>
 
@@ -57,12 +57,12 @@ export default function Hero() {
               className="font-cormorant text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#1B3A2E] leading-[1.1] mb-6"
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
-              Hari Paling{' '}
-              <em className="italic text-[#C8A96E]">Istimewa</em>
+              Pernikahan Impian{' '}
+              <em className="italic text-[#C8A96E]">Tanpa Ribet</em>
               <br />
-              Layak Direncanakan{' '}
+              Anda Tinggal{' '}
               <br className="hidden sm:block" />
-              dengan Sempurna
+              Hadir & Bahagia
             </motion.h1>
 
             {/* Sub */}
@@ -73,9 +73,8 @@ export default function Hero() {
               className="text-[#5a5a5a] text-lg leading-relaxed mb-8 max-w-lg font-dm"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Kami hadir untuk mewujudkan pernikahan impian Anda — dari detail
-              terkecil hingga momen terbesar — dengan sentuhan personal yang
-              benar-benar mencerminkan diri Anda berdua.
+              Serahkan semua urusan persiapan kepada tim profesional kami. Anda
+              fokus menikmati momen — kami yang handle semuanya dari A sampai Z.
             </motion.p>
 
             {/* Stats */}
@@ -86,9 +85,9 @@ export default function Hero() {
               className="flex items-center gap-8 mb-10"
             >
               {[
-                { num: '7+', label: 'Tahun Pengalaman' },
                 { num: '200+', label: 'Pernikahan Sukses' },
-                { num: '99%', label: 'Klien Puas' },
+                { num: '7+', label: 'Tahun Pengalaman' },
+                { num: '100%', label: 'On Budget' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p
@@ -119,7 +118,7 @@ export default function Hero() {
                 className="px-8 py-4 bg-[#1B3A2E] text-[#FAF8F4] font-dm font-semibold text-sm tracking-wide rounded-full transition-all duration-300 hover:bg-[#C8A96E] hover:text-[#1B3A2E] text-center"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
-                Konsultasi Gratis
+                Konsultasi Gratis Sekarang
               </a>
               <button
                 onClick={handleWAClick}
@@ -160,7 +159,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[200px]"
+              className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
             >
               <div className="w-10 h-10 rounded-full bg-[#C8A96E]/20 flex items-center justify-center flex-shrink-0">
                 <span className="text-[#C8A96E] text-lg">✦</span>
@@ -170,13 +169,13 @@ export default function Hero() {
                   className="font-cormorant text-[#1B3A2E] font-semibold text-base leading-none"
                   style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
                 >
-                  Slot Terbatas
+                  Kuota Terbatas
                 </p>
                 <p
                   className="text-[#888] text-xs font-dm mt-0.5"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
-                  Hanya 4 slot/bulan
+                  Maksimal 4 event/bulan
                 </p>
               </div>
             </motion.div>

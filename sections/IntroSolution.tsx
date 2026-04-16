@@ -7,18 +7,18 @@ import { motion, useInView } from 'framer-motion'
 const pillars = [
   {
     icon: '✦',
-    title: 'Fully Personalized',
-    desc: 'Bukan paket template. Setiap detail disesuaikan dengan cerita dan karakter Anda.',
+    title: 'Full Handle dari A-Z',
+    desc: 'Kami urus semua — dari riset vendor, negosiasi harga, sampai koordinasi hari H. Anda tinggal approve.',
   },
   {
     icon: '✦',
-    title: 'Satu Titik Kontak',
-    desc: 'Satu wedding planner dedicat yang menemani Anda dari awal hingga hari H.',
+    title: 'Satu PIC Dedicated',
+    desc: 'Satu personal planner yang benar-benar paham kebutuhan Anda dan bisa dihubungi kapan saja.',
   },
   {
     icon: '✦',
-    title: 'Transparan & Terpercaya',
-    desc: 'Anggaran yang jelas, tidak ada biaya tersembunyi. Anda selalu tahu kondisinya.',
+    title: 'Budget 100% Transparan',
+    desc: 'Tidak ada biaya tersembunyi. Setiap rupiah yang keluar tercatat dan bisa Anda pantau real-time.',
   },
 ]
 
@@ -44,7 +44,7 @@ export default function IntroSolution() {
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Layanan Utama Kami
+            Solusi untuk Anda
           </p>
         </motion.div>
 
@@ -59,8 +59,8 @@ export default function IntroSolution() {
             className="font-cormorant text-4xl lg:text-6xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Personalized Wedding Planner —{' '}
-            <em className="italic text-[#C8A96E]">Khusus untuk Anda</em>
+            Serahkan Semua Kepada Kami,{' '}
+            <em className="italic text-[#C8A96E]">Anda Cukup Bahagia</em>
           </h2>
         </motion.div>
 
@@ -72,10 +72,9 @@ export default function IntroSolution() {
           className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Kami tidak percaya pada pernikahan yang&nbsp;"satu ukuran untuk semua".
-          Setiap pasangan memiliki cerita unik — dan pernikahan Anda seharusnya
-          mencerminkan itu sepenuhnya. Dinata Organizer hadir sebagai mitra
-          personal Anda dalam setiap langkah persiapan.
+          Dinata Organizer adalah partner pernikahan yang akan handle semua
+          kerumitan untuk Anda. Dari konsep sampai eksekusi, kami pastikan
+          setiap detail sempurna — sesuai visi Anda, sesuai budget Anda.
         </motion.p>
 
         {/* Split layout */}

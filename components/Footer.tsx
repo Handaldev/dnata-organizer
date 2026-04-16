@@ -75,8 +75,8 @@ export default function Footer() {
               className="text-[#FAF8F4]/50 text-sm font-dm leading-relaxed mb-6 max-w-xs"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              CV Dinata Kreatif Group — Wedding & Event Organizer profesional
-              dengan pengalaman 7 tahun dan lebih dari 200 klien bahagia.
+              Wedding Organizer terpercaya di Jabodetabek. 200+ pernikahan sukses,
+              100% on budget, dan tim yang siap handle semua untuk Anda.
             </p>
             {/* Socials */}
             <div className="flex gap-3">

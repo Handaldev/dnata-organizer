@@ -63,7 +63,7 @@ export default function CTASection() {
                 className="text-[#C8A96E] text-xs font-dm font-medium tracking-wide"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
-                Hanya 4 Slot Tersedia per Bulan
+                Kuota Terbatas: Maks 4 Event/Bulan
               </span>
             </div>
 
@@ -71,28 +71,27 @@ export default function CTASection() {
               className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#FAF8F4] leading-tight mb-6"
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
-              Mulai Rencanakan{' '}
+              Siap Wujudkan{' '}
               <em className="italic text-[#C8A96E]">Pernikahan Impian</em>{' '}
-              Anda Hari Ini
+              Tanpa Ribet?
             </h2>
 
             <p
               className="text-[#FAF8F4]/70 text-base font-dm leading-relaxed mb-8"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Isi form di samping dan tim kami akan menghubungi Anda dalam
-              1×24 jam. Konsultasi pertama{' '}
-              <strong className="text-[#C8A96E]">gratis</strong> dan tanpa
-              komitmen apapun.
+              Isi form sekarang dan dapatkan pricing list + konsultasi{' '}
+              <strong className="text-[#C8A96E]">GRATIS</strong>. Tim kami
+              akan hubungi Anda dalam 1x24 jam untuk diskusi kebutuhan.
             </p>
 
             {/* Guarantees */}
             <div className="space-y-4 mb-10">
               {[
-                'Konsultasi pertama gratis',
-                'Tidak ada biaya tersembunyi',
-                'Planner dedicat khusus untuk Anda',
-                'Reschedule fleksibel hingga 3 bulan sebelum hari H',
+                'Konsultasi gratis tanpa commitment',
+                '100% transparan, no hidden cost',
+                'Personal planner dedicated untuk Anda',
+                'Garansi harga terbaik dari vendor',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#C8A96E]/20 border border-[#C8A96E]/40 flex items-center justify-center flex-shrink-0">
@@ -197,13 +196,13 @@ export default function CTASection() {
                       className="font-cormorant text-2xl font-semibold text-[#1B3A2E] mb-1"
                       style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
                     >
-                      Konsultasi & Download Pricing
+                      Dapatkan Pricing + Konsultasi Gratis
                     </h3>
                     <p
                       className="text-[#888] text-sm font-dm"
                       style={{ fontFamily: 'DM Sans, sans-serif' }}
                     >
-                      Isi data di bawah untuk mendapatkan pricing list lengkap
+                      Isi form ini dan kami akan kirim pricing lengkap ke WhatsApp Anda
                     </p>
                   </div>
                   <LeadForm />
