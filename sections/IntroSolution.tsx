@@ -44,7 +44,7 @@ export default function IntroSolution() {
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Solusi untuk Anda
+            Kenapa Dinata Berbeda
           </p>
         </motion.div>
 
@@ -59,7 +59,7 @@ export default function IntroSolution() {
             className="font-cormorant text-4xl lg:text-6xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Dinata Bukan Sekedar Wedding Organizer
+            Kami Bukan Sekedar Wedding Organizer
           </h2>
         </motion.div>
 
