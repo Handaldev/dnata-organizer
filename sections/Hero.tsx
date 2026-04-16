@@ -76,8 +76,8 @@ export default function Hero() {
               className="text-[#5a5a5a] text-lg leading-relaxed mb-8 max-w-lg font-dm"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Serahkan semua urusan persiapan kepada tim profesional kami. Anda
-              fokus menikmati momen — kami yang handle semuanya dari A sampai Z.
+              Bukan paket massal. Dinata Organizer hanya terima 4 klien per bulan.
+              Setiap pernikahan mendapat perhatian penuh yang layak ia dapatkan.
             </motion.p>
 
             {/* Stats */}
