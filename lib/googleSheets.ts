@@ -26,6 +26,7 @@ export async function submitLeadToSheet(data: LeadData): Promise<boolean> {
 
     const response = await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
@@ -46,6 +47,7 @@ export async function updateLeadStatus(
   try {
     const response = await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ idKonsultasi, status, action: 'update_status' }),
     })
