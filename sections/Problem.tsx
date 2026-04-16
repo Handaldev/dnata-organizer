@@ -5,19 +5,24 @@ import { motion, useInView } from 'framer-motion'
 
 const problems = [
   {
+    icon: '💸',
+    title: 'Budget Jebol Tanpa Sadar',
+    desc: 'Sudah kalkulasi matang, tapi ternyata banyak biaya yang tidak kelihatan di awal. Tiba-tiba angkanya jauh dari rencana.',
+  },
+  {
     icon: '😓',
     title: 'Pusing Koordinasi Vendor',
-    desc: 'Harus deal dengan puluhan vendor berbeda — venue, katering, dekorasi, fotografer — semua minta keputusan cepat dan bikin kepala pening.',
+    desc: 'Deal dengan venue, katering, dekorasi, fotografer — semua minta keputusan cepat, semua minta difollow up. Kapan waktunya nikmatin masa tunangan?',
   },
   {
     icon: '😰',
     title: 'Takut Hari H Berantakan',
-    desc: 'Sudah bayar mahal tapi tetap was-was. Gimana kalau vendor telat? Gimana kalau dekorasi tidak sesuai? Semuanya serba tidak pasti.',
+    desc: 'Sudah bayar mahal, tapi tetap tidak bisa tidur tenang. Gimana kalau vendor tiba-tiba bermasalah? Gimana kalau timeline meleset?',
   },
   {
-    icon: '💸',
-    title: 'Budget Jebol Tanpa Sadar',
-    desc: 'Awalnya sudah hitung matang, eh ternyata banyak biaya tersembunyi. Ujung-ujungnya overspending dan bikin stres.',
+    icon: '😤',
+    title: 'Vendor Rekomendasi Teman Mengecewakan',
+    desc: 'Referensi dari circle terdekat tidak selalu cocok — dan kamu baru tahu kekecewaannya pas sudah terlanjur deal.',
   },
 ]
 
