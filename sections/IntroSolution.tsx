@@ -3,22 +3,39 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
+import {
+  Shuffle,        // Full Handle A–Z
+  UserCheck,      // 1 Personal Planner Dedicated
+  Wallet,         // Budget 100% Transparan
+  NotebookPen,    // Ingat Setiap Detail Kamu
+  Network         // Vendor Network Eksklusif
+} from 'lucide-react'
 
 const pillars = [
   {
-    icon: '✦',
+    icon: <Shuffle className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Full Handle dari A-Z',
-    desc: 'Kami urus semua — dari riset vendor, negosiasi harga, sampai koordinasi hari H. Anda tinggal approve.',
+    desc: 'Dari riset vendor, negosiasi harga, sampai koordinasi hari H — semua kami yang urus. Kamu tinggal approve..',
   },
   {
-    icon: '✦',
+    icon: <NotebookPen className="w-5 h-5 text-[#C8A96E]" />,
+    title: 'Ingat Setiap Detail Kamu',
+    desc: 'Dari preferensi warna, pantangan makanan tamu, sampai momen kecil yang pengen kamu abadikan — semua kami catat dan kami eksekusi tanpa kamu perlu ingatkan dua kali.',
+  },
+  {
+    icon: <UserCheck className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Satu PIC Dedicated',
-    desc: 'Satu personal planner yang benar-benar paham kebutuhan Anda dan bisa dihubungi kapan saja.',
+    desc: 'Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
   },
   {
-    icon: '✦',
+    icon: <Network className="w-5 h-5 text-[#C8A96E]" />,
+    title: 'Vendor Network Eksklusif',
+    desc: '7 tahun di industri ini, kami punya akses ke vendor-vendor terbaik yang tidak semua orang tahu — dengan harga yang sudah kami negosiasikan khusus untuk klien kami.Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
+  },
+  {
+    icon: <Wallet className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Budget 100% Transparan',
-    desc: 'Tidak ada biaya tersembunyi. Setiap rupiah yang keluar tercatat dan bisa Anda pantau real-time.',
+    desc: 'Tidak ada hidden cost. Setiap pengeluaran tercatat dan bisa kamu pantau real-time..',
   },
 ]
 
@@ -44,7 +61,7 @@ export default function IntroSolution() {
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Solusi untuk Anda
+            Kenapa Dinata Berbeda
           </p>
         </motion.div>
 
@@ -59,8 +76,7 @@ export default function IntroSolution() {
             className="font-cormorant text-4xl lg:text-6xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Serahkan Semua Kepada Kami,{' '}
-            <em className="italic text-[#C8A96E]">Anda Cukup Bahagia</em>
+            Kami Bukan Sekedar Wedding Organizer
           </h2>
         </motion.div>
 
@@ -72,9 +88,10 @@ export default function IntroSolution() {
           className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Dinata Organizer adalah partner pernikahan yang akan handle semua
-          kerumitan untuk Anda. Dari konsep sampai eksekusi, kami pastikan
-          setiap detail sempurna — sesuai visi Anda, sesuai budget Anda.
+          WO biasa urus banyak klien sekaligus, kamu cuma satu dari sekian klien.
+          Di Dinata, kamu dapat satu personal planner yang tahu nama tamu VIP kamu,
+          preferensi detail kamu, bahkan lagu pertama yang mau diputar saat kamu masuk.
+          Semua diingat. Semua dieksekusi.
         </motion.p>
 
         {/* Split layout */}

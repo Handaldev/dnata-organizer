@@ -7,38 +7,38 @@ import { motion, useInView } from 'framer-motion'
 const steps = [
   {
     number: '01',
-    title: 'Ceritakan Impian Anda',
-    desc: 'Di sesi pertama, kami tidak langsung bicara soal harga. Yang kami ingin dengar adalah impian pernikahan Anda — tema apa yang diinginkan, venue seperti apa yang dibayangkan, dan budget yang tersedia. Dari sini kami mulai merancang proposal yang pas.',
+    title: 'Cerita Dulu, Baru Kita Rancang',
+    desc: 'Di sesi pertama, kita tidak langsung bicara soal paket atau harga. Kita duduk bareng — kamu cerita visi pernikahannya seperti apa, budget yang tersedia, dan hal-hal kecil yang penting buat kamu. Dari sana baru kita rancang proposal yang benar-benar pas.',
     image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=90',
     imageAlt: 'Sesi konsultasi wedding planner Dinata Organizer',
     points: [
-      'Konsultasi gratis tanpa komitmen',
-      'Dengarkan visi dan budget Anda',
+      'Konsultasi gratis, tanpa komitmen',
+      'Kamu yang tentukan arahnya',
       'Proposal custom dalam 3 hari kerja',
     ],
   },
   {
     number: '02',
-    title: 'Kami Eksekusi, Anda Pantau',
-    desc: 'Setelah deal, tim kami langsung bergerak. Riset vendor terbaik, negosiasi harga, koordinasi jadwal — semua kami yang handle. Anda tinggal approve via WhatsApp dan pantau progress lewat update rutin dari kami.',
+    title: 'Kami Gerak, Kamu Tenang',
+    desc: 'Setelah deal, tim kami langsung turun tangan. Riset vendor terbaik sesuai budget kamu, negosiasi harga, koordinasi jadwal — semua kami handle. Kamu tinggal approve via WhatsApp, sisanya biar kami yang pikirin.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=90',
     imageAlt: 'Perencanaan detail pernikahan bersama tim Dinata Organizer',
     points: [
-      'Vendor pilihan sesuai budget',
-      'Negosiasi harga terbaik untuk Anda',
-      'Update progress mingguan via WA',
+      'Vendor pilihan, sesuai budget',
+      'Negosiasi harga terbaik untuk kamu',
+      'Update progress tiap minggu via WA',
     ],
   },
   {
     number: '03',
     title: 'Hari H Berjalan Sempurna',
-    desc: 'Di hari spesial Anda, tim kami standby dari pagi sampai selesai. Koordinasi vendor, troubleshooting masalah, memastikan timeline berjalan — semua di-handle tanpa Anda perlu tahu. Anda tinggal hadir dan nikmati momen.',
+    desc: 'Tim kami standby dari pagi sampai selesai. Koordinasi vendor, troubleshooting, jaga timeline — semua beres di belakang layar tanpa kamu perlu tahu. Kamu fokus nikmatin momen paling spesial dalam hidupmu.',
     image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=90',
     imageAlt: 'Hari pernikahan yang sempurna bersama Dinata Organizer',
     points: [
       'Tim on-site full day',
-      'Koordinasi semua vendor',
-      'Problem solving di belakang layar',
+      'Problem solving tanpa ganggu kamu',
+      'Semua vendor terkoordinasi rapi',
     ],
   },
 ]
@@ -158,7 +158,7 @@ export default function Process() {
           className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Prosesnya Mudah
+          Prosesnya Simple
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
@@ -168,7 +168,7 @@ export default function Process() {
           style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
         >
           3 Langkah Menuju{' '}
-          <em className="italic text-[#C8A96E]">Pernikahan Impian</em>
+          <em className="italic text-[#C8A96E]">Pernikahan yang Kamu Impikan</em>
         </motion.h2>
       </div>
 

@@ -111,9 +111,8 @@ export default function LeadForm() {
           value={form.nama}
           onChange={handleChange}
           placeholder="Contoh: Siti & Budi"
-          className={`w-full px-4 py-3 rounded-xl border bg-white text-[#1a1a1a] placeholder-gray-400 text-sm font-dm transition-all outline-none focus:ring-2 focus:ring-[#C8A96E]/40 focus:border-[#C8A96E] ${
-            errors.nama ? 'border-red-400' : 'border-[#E0D8D0]'
-          }`}
+          className={`w-full px-4 py-3 rounded-xl border bg-white text-[#1a1a1a] placeholder-gray-400 text-sm font-dm transition-all outline-none focus:ring-2 focus:ring-[#C8A96E]/40 focus:border-[#C8A96E] ${errors.nama ? 'border-red-400' : 'border-[#E0D8D0]'
+            }`}
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         />
         {errors.nama && (
@@ -137,9 +136,8 @@ export default function LeadForm() {
           value={form.noHp}
           onChange={handleChange}
           placeholder="08xxxxxxxxxx"
-          className={`w-full px-4 py-3 rounded-xl border bg-white text-[#1a1a1a] placeholder-gray-400 text-sm font-dm transition-all outline-none focus:ring-2 focus:ring-[#C8A96E]/40 focus:border-[#C8A96E] ${
-            errors.noHp ? 'border-red-400' : 'border-[#E0D8D0]'
-          }`}
+          className={`w-full px-4 py-3 rounded-xl border bg-white text-[#1a1a1a] placeholder-gray-400 text-sm font-dm transition-all outline-none focus:ring-2 focus:ring-[#C8A96E]/40 focus:border-[#C8A96E] ${errors.noHp ? 'border-red-400' : 'border-[#E0D8D0]'
+            }`}
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         />
         {errors.noHp && (
@@ -184,9 +182,8 @@ export default function LeadForm() {
             name="kota"
             value={form.kota}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-xl border bg-white text-sm font-dm transition-all outline-none focus:ring-2 focus:ring-[#C8A96E]/40 focus:border-[#C8A96E] appearance-none pr-10 ${
-              form.kota ? 'text-[#1a1a1a]' : 'text-gray-400'
-            } ${errors.kota ? 'border-red-400' : 'border-[#E0D8D0]'}`}
+            className={`w-full px-4 py-3 rounded-xl border bg-white text-sm font-dm transition-all outline-none focus:ring-2 focus:ring-[#C8A96E]/40 focus:border-[#C8A96E] appearance-none pr-10 ${form.kota ? 'text-[#1a1a1a]' : 'text-gray-400'
+              } ${errors.kota ? 'border-red-400' : 'border-[#E0D8D0]'}`}
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             {kotaOptions.map((opt) => (
@@ -210,7 +207,7 @@ export default function LeadForm() {
         className="text-xs text-gray-500 font-dm leading-relaxed pt-1"
         style={{ fontFamily: 'DM Sans, sans-serif' }}
       >
-        🔒 Data Anda aman dan hanya digunakan untuk keperluan konsultasi.
+        🔒 Data kamu aman. Hanya digunakan untuk keperluan konsultasi.
       </p>
 
       {/* Submit */}
