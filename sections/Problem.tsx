@@ -49,8 +49,8 @@ export default function Problem() {
             className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#FAF8F4] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Mengurus Pernikahan Sendiri{' '}
-            <em className="italic text-[#C8A96E]">Itu Melelahkan</em>
+            Kenapa Banyak Pasangan Akhirnya {' '}
+            <em className="italic text-[#C8A96E]">Menyerah Urus Sendiri?</em>
           </h2>
           <p
             className="mt-4 text-[#FAF8F4]/60 max-w-xl mx-auto text-base font-dm leading-relaxed"
