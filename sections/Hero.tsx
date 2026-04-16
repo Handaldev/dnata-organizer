@@ -59,9 +59,11 @@ export default function Hero() {
             >
               Satu{' '}
               <em className="italic font-extrabold text-[#C8A96E]">Planner</em>
+              .{' '}
               <br />
               Satu{' '}
               <em className="italic font-extrabold text-[#C8A96E]">Fokus</em>
+              .{' '}
               <br />
               <em className="italic font-extrabold text-[#C8A96E]">Wujudkan Pernikahan Impian Anda</em>
             </motion.h1>
