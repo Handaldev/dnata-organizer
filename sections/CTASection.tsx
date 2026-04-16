@@ -36,7 +36,7 @@ export default function CTASection() {
     <section
       id="konsultasi"
       ref={ref}
-      className="py-24 lg:py-32 bg-[#1B3A2E] relative overflow-hidden"
+      className="py-28 lg:py-36 bg-[#1B3A2E] relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div
@@ -48,7 +48,7 @@ export default function CTASection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left — Copy */}
           <motion.div
@@ -72,7 +72,7 @@ export default function CTASection() {
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
               Cek Apakah{' '}
-              <em className="italic text-[#C8A96E]">Tanggal Kamu</em>{' '}
+              <em className="font-cormorant italic text-[#C8A96E]" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>Tanggal Kamu</em>{' '}
               Masih Tersedia?
             </h2>
 

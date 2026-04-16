@@ -29,7 +29,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-28 pb-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Column */}
           <div className="order-2 lg:order-1">
@@ -58,12 +58,12 @@ export default function Hero() {
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
               Satu{' '}
-              <em className="italic font-extrabold text-[#C8A96E]">Planner</em>
+              <em className="font-cormorant italic font-extrabold text-[#C8A96E]" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>Planner</em>
               .{' '}
               <br />
               Fokus Penuh untuk{' '}
               <br />
-              <em className="italic font-extrabold text-[#C8A96E]">Pernikahan Kamu</em>
+              <em className="font-cormorant italic font-extrabold text-[#C8A96E]" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>Pernikahan Kamu</em>
             </motion.h1>
 
             {/* Sub */}
