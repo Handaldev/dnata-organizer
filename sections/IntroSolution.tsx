@@ -3,6 +3,13 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
+import {
+  Shuffle,        // Full Handle A–Z
+  UserCheck,      // 1 Personal Planner Dedicated
+  Wallet,         // Budget 100% Transparan
+  NotebookPen,    // Ingat Setiap Detail Kamu
+  Network         // Vendor Network Eksklusif
+} from 'lucide-react'
 
 const pillars = [
   {
