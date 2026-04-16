@@ -45,7 +45,7 @@ export default function Hero() {
                 className="text-[#1B3A2E] text-xs font-dm font-medium tracking-widest uppercase"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
-                Dipercaya 200+ Pasangan Bahagia
+                Hanya 4 Slot Per Bulan · 200+ Pernikahan Sukses
               </span>
             </motion.div>
 
@@ -61,11 +61,9 @@ export default function Hero() {
               <em className="italic font-extrabold text-[#C8A96E]">Planner</em>
               .{' '}
               <br />
-              Satu{' '}
-              <em className="italic font-extrabold text-[#C8A96E]">Fokus</em>
-              .{' '}
+              Fokus Penuh untuk{' '}
               <br />
-              Pernikahan Impian Anda{' '}
+              <em className="italic font-extrabold text-[#C8A96E]">Pernikahan Kamu</em>
             </motion.h1>
 
             {/* Sub */}
