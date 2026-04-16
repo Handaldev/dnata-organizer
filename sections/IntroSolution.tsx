@@ -18,12 +18,12 @@ const pillars = [
     desc: 'Dari riset vendor, negosiasi harga, sampai koordinasi hari H — semua kami yang urus. Kamu tinggal approve..',
   },
   {
-    icon: '✦',
+    icon: <UserCheck className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Satu PIC Dedicated',
     desc: 'Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
   },
   {
-    icon: '✦',
+    icon: <Wallet className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Budget 100% Transparan',
     desc: 'Tidak ada hidden cost. Setiap pengeluaran tercatat dan bisa kamu pantau real-time..',
   },
