@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you
+
+Sitemap: https://dinataorganizer.com/sitemap.xml
