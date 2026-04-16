@@ -178,7 +178,7 @@ export default function Hero() {
                   className="text-[#888] text-xs font-dm mt-0.5"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
-                  Maksimal 4 event/bulan · 200+ Pernikahan Sukses
+                  Maksimal 4 event/bulan
                 </p>
               </div>
             </motion.div>
