@@ -7,38 +7,38 @@ import { motion, useInView } from 'framer-motion'
 const steps = [
   {
     number: '01',
-    title: 'Konsultasi & Kenali Cerita Anda',
-    desc: 'Sesi pertama kami bukan tentang paket atau harga. Kami ingin benar-benar mengenal Anda berdua — cerita cinta, impian, nilai-nilai, dan visi untuk hari pernikahan Anda. Dari sini, kami mulai merancang konsep yang benar-benar unik.',
+    title: 'Ceritakan Impian Anda',
+    desc: 'Di sesi pertama, kami tidak langsung bicara soal harga. Yang kami ingin dengar adalah impian pernikahan Anda — tema apa yang diinginkan, venue seperti apa yang dibayangkan, dan budget yang tersedia. Dari sini kami mulai merancang proposal yang pas.',
     image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=90',
     imageAlt: 'Sesi konsultasi wedding planner Dinata Organizer',
     points: [
       'Konsultasi gratis tanpa komitmen',
-      'Diskusi mendalam tentang visi Anda',
-      'Estimasi anggaran awal yang transparan',
+      'Dengarkan visi dan budget Anda',
+      'Proposal custom dalam 3 hari kerja',
     ],
   },
   {
     number: '02',
-    title: 'Rancang & Rencanakan Detail',
-    desc: 'Bersama planner dedicat Anda, kami menyusun setiap detail — dari timeline venue hingga dekorasi meja tamu. Anda dilibatkan di setiap keputusan, namun tidak perlu menanggung beban eksekusinya.',
+    title: 'Kami Eksekusi, Anda Pantau',
+    desc: 'Setelah deal, tim kami langsung bergerak. Riset vendor terbaik, negosiasi harga, koordinasi jadwal — semua kami yang handle. Anda tinggal approve via WhatsApp dan pantau progress lewat update rutin dari kami.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=90',
     imageAlt: 'Perencanaan detail pernikahan bersama tim Dinata Organizer',
     points: [
-      'Moodboard & konsep visual eksklusif',
-      'Seleksi & koordinasi semua vendor',
-      'Manajemen anggaran real-time',
+      'Vendor pilihan sesuai budget',
+      'Negosiasi harga terbaik untuk Anda',
+      'Update progress mingguan via WA',
     ],
   },
   {
     number: '03',
-    title: 'Hari H — Anda Cukup Hadir & Bahagia',
-    desc: 'Di hari istimewa Anda, tim kami bekerja di balik layar memastikan setiap momen berjalan sempurna. Anda tidak perlu khawatir tentang apapun — cukup hadir, tersenyum, dan nikmati setiap detiknya.',
+    title: 'Hari H Berjalan Sempurna',
+    desc: 'Di hari spesial Anda, tim kami standby dari pagi sampai selesai. Koordinasi vendor, troubleshooting masalah, memastikan timeline berjalan — semua di-handle tanpa Anda perlu tahu. Anda tinggal hadir dan nikmati momen.',
     image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=90',
     imageAlt: 'Hari pernikahan yang sempurna bersama Dinata Organizer',
     points: [
-      'Tim on-site dari pagi hingga selesai',
-      'Koordinasi real-time semua vendor',
-      'Troubleshooting tanpa Anda sadari',
+      'Tim on-site full day',
+      'Koordinasi semua vendor',
+      'Problem solving di belakang layar',
     ],
   },
 ]
@@ -50,7 +50,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
   return (
     <div
       ref={ref}
-      className="min-h-screen flex items-center py-24 sticky top-0"
+      className="min-h-screen flex items-center py-24 sticky top-0 bg-[#FAF8F4]"
     >
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -158,7 +158,7 @@ export default function Process() {
           className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Bagaimana Kami Bekerja
+          Prosesnya Mudah
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
@@ -167,8 +167,8 @@ export default function Process() {
           className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#1B3A2E] leading-tight"
           style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
         >
-          Proses Kami — Sederhana,{' '}
-          <em className="italic text-[#C8A96E]">Terstruktur, Personal</em>
+          3 Langkah Menuju{' '}
+          <em className="italic text-[#C8A96E]">Pernikahan Impian</em>
         </motion.h2>
       </div>
 

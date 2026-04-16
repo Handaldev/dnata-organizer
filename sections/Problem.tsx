@@ -6,18 +6,18 @@ import { motion, useInView } from 'framer-motion'
 const problems = [
   {
     icon: '😓',
-    title: 'Kewalahan Mengurus Detail',
-    desc: 'Ratusan keputusan harus dibuat — venue, katering, dekorasi, dokumentasi — semuanya sekarang dan bikin stres.',
+    title: 'Pusing Koordinasi Vendor',
+    desc: 'Harus deal dengan puluhan vendor berbeda — venue, katering, dekorasi, fotografer — semua minta keputusan cepat dan bikin kepala pening.',
   },
   {
     icon: '😰',
-    title: 'Takut Momen Tak Sesuai Ekspektasi',
-    desc: 'Sudah memimpikan hari itu bertahun-tahun, tapi khawatir hasilnya tidak seindah bayangan. Momen sekali seumur hidup tidak boleh salah.',
+    title: 'Takut Hari H Berantakan',
+    desc: 'Sudah bayar mahal tapi tetap was-was. Gimana kalau vendor telat? Gimana kalau dekorasi tidak sesuai? Semuanya serba tidak pasti.',
   },
   {
     icon: '💸',
-    title: 'Anggaran Membengkak Tak Terduga',
-    desc: 'Banyak hidden cost yang tidak pernah diberitahu di awal. Budget sudah ketat, tapi tetap overrun di akhir.',
+    title: 'Budget Jebol Tanpa Sadar',
+    desc: 'Awalnya sudah hitung matang, eh ternyata banyak biaya tersembunyi. Ujung-ujungnya overspending dan bikin stres.',
   },
 ]
 
@@ -43,21 +43,21 @@ export default function Problem() {
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Kami Memahami
+            Familiar dengan masalah ini?
           </p>
           <h2
             className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#FAF8F4] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Persiapan Pernikahan Itu{' '}
-            <em className="italic text-[#C8A96E]">Tidak Mudah</em>
+            Mengurus Pernikahan Sendiri{' '}
+            <em className="italic text-[#C8A96E]">Itu Melelahkan</em>
           </h2>
           <p
             className="mt-4 text-[#FAF8F4]/60 max-w-xl mx-auto text-base font-dm leading-relaxed"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Banyak pasangan datang kepada kami setelah merasa kehabisan tenaga
-            mencoba mengurus semuanya sendiri.
+            Anda seharusnya menikmati masa persiapan pernikahan, bukan malah
+            stres dan kelelahan. Sayangnya, inilah yang dialami banyak pasangan.
           </p>
         </motion.div>
 
@@ -69,7 +69,7 @@ export default function Problem() {
               initial={{ opacity: 0, y: 32 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 + i * 0.12 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 group"
+              className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 group text-center"
             >
               <div className="text-4xl mb-5">{item.icon}</div>
               <h3
@@ -101,7 +101,7 @@ export default function Problem() {
               className="text-[#C8A96E] text-sm font-dm italic"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Tapi ada solusinya
+              Tenang, ada cara yang lebih mudah
             </span>
             <div className="h-px w-24 bg-gradient-to-l from-transparent to-[#C8A96E]/50" />
           </div>
