@@ -187,7 +187,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute -bottom-4 -left-4 lg:-left-28 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
+              className="absolute -bottom-4 -left-4 lg:-left 128 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
             >
               <div className="w-10 h-10 rounded-full bg-[#C8A96E]/20 flex items-center justify-center flex-shrink-0">
                 <span className="text-[#C8A96E] text-lg">✦</span>
