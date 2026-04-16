@@ -57,8 +57,8 @@ export default function Hero() {
               className="font-cormorant text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#1B3A2E] leading-[1.1] mb-6"
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
-              Pernikahan Impian{' '}
-              <em className="italic text-[#C8A96E]">Tanpa Ribet</em>
+              Satu{' '}
+              <em className="italic text-[#C8A96E]">Planner</em>
               <br />
               Anda Tinggal{' '}
               <br className="hidden sm:block" />
