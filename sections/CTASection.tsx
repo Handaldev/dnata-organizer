@@ -63,7 +63,7 @@ export default function CTASection() {
                 className="text-[#C8A96E] text-xs font-dm font-medium tracking-wide"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
-                Kuota Terbatas: Maks 4 Event/Bulan
+                Slot Terbatas!
               </span>
             </div>
 
