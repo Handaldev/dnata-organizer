@@ -50,10 +50,10 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
   return (
     <div
       ref={ref}
-      className="min-h-screen flex items-center py-24 sticky top-0 bg-[#FAF8F4]"
+      className="min-h-screen flex items-center py-28 sticky top-0 bg-[#FAF8F4]"
     >
-      <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-8 lg:px-12 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -32 }}
@@ -61,21 +61,22 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
             transition={{ duration: 0.8, delay: 0.1 }}
             className={index % 2 === 1 ? 'lg:order-2' : ''}
           >
-            {/* Step number */}
-            <p
-              className="font-cormorant text-8xl font-bold text-[#C8A96E]/20 leading-none mb-4 select-none"
-              style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
-              aria-hidden="true"
-            >
-              {step.number}
-            </p>
-
-            <p
-              className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-3"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
-            >
-              Langkah {step.number}
-            </p>
+            {/* Step number with label beside it */}
+            <div className="flex items-center gap-4 mb-6">
+              <p
+                className="font-cormorant text-7xl lg:text-8xl font-bold text-[#C8A96E]/20 leading-none select-none"
+                style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+                aria-hidden="true"
+              >
+                {step.number}
+              </p>
+              <p
+                className="text-[#C8A96E] text-xs tracking-[0.2em] uppercase font-dm"
+                style={{ fontFamily: 'DM Sans, sans-serif' }}
+              >
+                Kenapa Dinata?
+              </p>
+            </div>
 
             <h3
               className="font-cormorant text-3xl lg:text-4xl font-semibold text-[#1B3A2E] leading-tight mb-5"
@@ -149,7 +150,7 @@ export default function Process() {
       {/* Section header */}
       <div
         ref={headerRef}
-        className="max-w-7xl mx-auto px-6 pt-24 pb-12 text-center"
+        className="max-w-7xl mx-auto px-8 lg:px-12 pt-28 pb-12 text-center"
       >
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -168,7 +169,7 @@ export default function Process() {
           style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
         >
           3 Langkah Menuju{' '}
-          <em className="italic text-[#C8A96E]">Pernikahan yang Kamu Impikan</em>
+          <em className="font-cormorant italic text-[#C8A96E]" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>Pernikahan yang Kamu Impikan</em>
         </motion.h2>
       </div>
 

@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0e2819] text-[#FAF8F4]">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-16">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Brand */}
           <div>
@@ -172,7 +172,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-[#FAF8F4]/5">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-8 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p
             className="text-[#FAF8F4]/30 text-xs font-dm"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
