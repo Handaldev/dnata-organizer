@@ -37,8 +37,8 @@ const steps = [
     imageAlt: 'Hari pernikahan yang sempurna bersama Dinata Organizer',
     points: [
       'Tim on-site full day',
-      'Koordinasi semua vendor',
-      'Problem solving di belakang layar',
+      'Problem solving tanpa ganggu kamu',
+      'Semua vendor terkoordinasi rapi',
     ],
   },
 ]
