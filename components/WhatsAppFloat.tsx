@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X } from 'lucide-react'
 import { getWhatsAppLink, getUserData } from '@/lib/utils'
-import { trackWhatsAppClick, updateLeadStatus } from '@/lib/analytics'
+import { trackWhatsAppClick } from '@/lib/analytics'
 import { updateLeadStatus as updateSheet } from '@/lib/googleSheets'
 
 export default function WhatsAppFloat() {
