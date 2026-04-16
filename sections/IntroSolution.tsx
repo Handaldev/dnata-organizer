@@ -59,8 +59,7 @@ export default function IntroSolution() {
             className="font-cormorant text-4xl lg:text-6xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Dinata,{' '}
-            <em className="italic text-[#C8A96E]">Bukan Sekedar Wedding Organizer</em>
+            Dinata Bukan Sekedar Wedding Organizer
           </h2>
         </motion.div>
 
