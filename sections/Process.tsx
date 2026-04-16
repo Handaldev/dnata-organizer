@@ -52,7 +52,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
       ref={ref}
       className="min-h-screen flex items-center py-28 sticky top-0 bg-[#FAF8F4]"
     >
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 w-full">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 w-full">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Text */}
           <motion.div
@@ -150,7 +150,7 @@ export default function Process() {
       {/* Section header */}
       <div
         ref={headerRef}
-        className="max-w-7xl mx-auto px-8 lg:px-12 pt-28 pb-12 text-center"
+        className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-28 pb-12 text-center"
       >
         <motion.p
           initial={{ opacity: 0, y: 16 }}

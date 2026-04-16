@@ -49,7 +49,7 @@ export default function IntroSolution() {
       ref={ref}
       className="py-28 lg:py-36 bg-[#F5EDE8] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20">
         {/* Top label */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
