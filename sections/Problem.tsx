@@ -61,8 +61,8 @@ export default function Problem() {
             className="mt-4 text-[#FAF8F4]/60 max-w-xl mx-auto text-base font-dm leading-relaxed"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Anda seharusnya menikmati masa persiapan pernikahan, bukan malah
-            stres dan kelelahan. Sayangnya, inilah yang dialami banyak pasangan.
+            Banyak pasangan mulai dengan semangat "kita handle sendiri aja" —
+            tapi 2 bulan kemudian burnout, sering ribut, dan hari H tetap was-was..
           </p>
         </motion.div>
 
