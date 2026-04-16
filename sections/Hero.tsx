@@ -120,7 +120,7 @@ export default function Hero() {
                 className="px-8 py-4 bg-[#1B3A2E] text-[#FAF8F4] font-dm font-semibold text-sm tracking-wide rounded-full transition-all duration-300 hover:bg-[#C8A96E] hover:text-[#1B3A2E] text-center"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
-                Cek Slot & Konsultasi Gratis
+                Cek Slot Ketersediaan
               </a>
               <button
                 onClick={handleWAClick}
