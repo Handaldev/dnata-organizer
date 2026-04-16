@@ -158,7 +158,7 @@ export default function Process() {
           className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Prosesnya Mudah
+          Prosesnya Simple
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
@@ -168,7 +168,7 @@ export default function Process() {
           style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
         >
           3 Langkah Menuju{' '}
-          <em className="italic text-[#C8A96E]">Pernikahan Impian</em>
+          <em className="italic text-[#C8A96E]">Pernikahan yang Kamu Impikan</em>
         </motion.h2>
       </div>
 
