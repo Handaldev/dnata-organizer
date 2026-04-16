@@ -171,17 +171,6 @@ export default function Testimonials() {
           </h2>
         </motion.div>
 
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-2xl mx-auto mb-20 font-dm"
-          style={{ fontFamily: 'DM Sans, sans-serif' }}
-        >
-          200+ pasangan sudah buktikan. Ini sebagian dari cerita mereka.
-        </motion.p>
-
         {/* Desktop: 5 cards per slide */}
         <div className="hidden lg:block">
           <AnimatePresence mode="wait">
