@@ -8,17 +8,17 @@ const pillars = [
   {
     icon: '✦',
     title: 'Full Handle dari A-Z',
-    desc: 'Kami urus semua — dari riset vendor, negosiasi harga, sampai koordinasi hari H. Anda tinggal approve.',
+    desc: 'Dari riset vendor, negosiasi harga, sampai koordinasi hari H — semua kami yang urus. Kamu tinggal approve..',
   },
   {
     icon: '✦',
     title: 'Satu PIC Dedicated',
-    desc: 'Satu personal planner yang benar-benar paham kebutuhan Anda dan bisa dihubungi kapan saja.',
+    desc: 'Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
   },
   {
     icon: '✦',
     title: 'Budget 100% Transparan',
-    desc: 'Tidak ada biaya tersembunyi. Setiap rupiah yang keluar tercatat dan bisa Anda pantau real-time.',
+    desc: 'Tidak ada hidden cost. Setiap pengeluaran tercatat dan bisa kamu pantau real-time..',
   },
 ]
 
