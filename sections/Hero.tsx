@@ -58,7 +58,7 @@ export default function Hero() {
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
               Satu{' '}
-              <em className="italic font-extrabold text-[#C8A96E]">Planner</em>
+              <em className="font-cormorant font-extrabold text-[#C8A96E]">Planner</em>
               .{' '}
               <br />
               Fokus Penuh untuk{' '}
