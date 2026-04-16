@@ -187,7 +187,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute -bottom-4 -left-24 lg:-left-28 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
+              className="absolute -bottom-4 -left-4 lg:-left-28 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
             >
               <div className="w-10 h-10 rounded-full bg-[#C8A96E]/20 flex items-center justify-center flex-shrink-0">
                 <span className="text-[#C8A96E] text-lg">✦</span>
@@ -197,13 +197,13 @@ export default function Hero() {
                   className="font-cormorant text-[#1B3A2E] font-semibold text-base leading-none"
                   style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
                 >
-                  Kuota Terbatas
+                  Profesional
                 </p>
                 <p
                   className="text-[#888] text-xs font-dm mt-0.5"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
-                  Maksimal 4 event/bulan
+                  200+ Pernikahan Sukses
                 </p>
               </div>
             </motion.div>
