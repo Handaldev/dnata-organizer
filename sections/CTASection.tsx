@@ -88,9 +88,9 @@ export default function CTASection() {
             {/* Guarantees */}
             <div className="space-y-4 mb-10">
               {[
-                'Konsultasi gratis tanpa commitment',
-                '100% transparan, no hidden cost',
-                'Personal planner dedicated untuk Anda',
+                'Konsultasi gratis, tanpa komitmen',
+                'Pricing transparan, tidak ada hidden cost',
+                'Personal planner dedicated khusus untuk kamu',
                 'Garansi harga terbaik dari vendor',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
@@ -196,13 +196,13 @@ export default function CTASection() {
                       className="font-cormorant text-2xl font-semibold text-[#1B3A2E] mb-1"
                       style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
                     >
-                      Dapatkan Pricing + Konsultasi Gratis
+                      Dapatkan Pricing List Paket lainnya + Konsultasi Gratis
                     </h3>
                     <p
                       className="text-[#888] text-sm font-dm"
                       style={{ fontFamily: 'DM Sans, sans-serif' }}
                     >
-                      Isi form ini dan kami akan kirim pricing lengkap ke WhatsApp Anda
+                      Isi form ini dan kamu akan mendapatkan Pricing List Full Paket
                     </p>
                   </div>
                   <LeadForm />
