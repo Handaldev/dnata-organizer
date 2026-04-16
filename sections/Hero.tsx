@@ -22,6 +22,18 @@ export default function Hero() {
         className="absolute top-0 right-0 w-1/2 h-full bg-[#1B3A2E]/5 rounded-l-[80px] hidden lg:block"
         aria-hidden="true"
       />
+      <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:max-w-none">
+        <Image
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=90"
+          alt="Momen pernikahan indah diorganisir oleh Dinata Organizer"
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A2E]/30 to-transparent" />
+      </div>
 
       {/* Gold accent line */}
       <div
