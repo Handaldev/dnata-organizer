@@ -145,7 +145,7 @@ export default function Hero() {
             {/* Main image */}
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:max-w-none">
               <Image
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=90"
+                src="/public/image/hero_kanan.webp"
                 alt="Momen pernikahan indah diorganisir oleh Dinata Organizer"
                 fill
                 className="object-cover"
