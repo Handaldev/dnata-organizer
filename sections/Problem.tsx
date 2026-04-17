@@ -58,8 +58,9 @@ export default function Problem() {
             Kenapa Banyak Pasangan Akhirnya {' '}
             <em className="font-cormorant italic text-[#C8A96E]" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>Menyerah Urus Sendiri?</em>
           </h2>
+          {/* ↑ opacity: /60 → /85 agar teks body lebih terbaca di bg gelap */}
           <p
-            className="mt-4 text-[#FAF8F4]/60 max-w-xl mx-auto text-base font-dm leading-relaxed"
+            className="mt-4 text-[#FAF8F4]/85 max-w-xl mx-auto text-base font-dm leading-relaxed"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             Banyak pasangan mulai dengan semangat &ldquo;kita handle sendiri aja&rdquo; —
@@ -75,7 +76,7 @@ export default function Problem() {
               initial={{ opacity: 0, y: 32 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 + i * 0.12 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 group text-center"
+              className="bg-white/8 border border-white/15 rounded-3xl p-8 hover:bg-white/12 transition-all duration-300 group text-center"
             >
               <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-[#C8A96E]/10 flex items-center justify-center text-[#C8A96E] group-hover:bg-[#C8A96E] group-hover:text-white transition-all duration-300">
                 {item.icon}
@@ -86,8 +87,9 @@ export default function Problem() {
               >
                 {item.title}
               </h3>
+              {/* ↑ opacity: /60 → /80 untuk deskripsi card */}
               <p
-                className="text-[#FAF8F4]/60 text-sm font-dm leading-relaxed"
+                className="text-[#FAF8F4]/80 text-sm font-dm leading-relaxed"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 {item.desc}

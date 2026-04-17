@@ -4,11 +4,11 @@ import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 import {
-  Shuffle,        // Full Handle A–Z
-  UserCheck,      // 1 Personal Planner Dedicated
-  Wallet,         // Budget 100% Transparan
-  NotebookPen,    // Ingat Setiap Detail Kamu
-  Network         // Vendor Network Eksklusif
+  Shuffle,
+  UserCheck,
+  Wallet,
+  NotebookPen,
+  Network
 } from 'lucide-react'
 
 const pillars = [
@@ -30,7 +30,7 @@ const pillars = [
   {
     icon: <Network className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Vendor Network Eksklusif',
-    desc: '7 tahun di industri ini, kami punya akses ke vendor-vendor terbaik yang tidak semua orang tahu — dengan harga yang sudah kami negosiasikan khusus untuk klien kami.Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
+    desc: '7 tahun di industri ini, kami punya akses ke vendor-vendor terbaik yang tidak semua orang tahu — dengan harga yang sudah kami negosiasikan khusus untuk klien kami.',
   },
   {
     icon: <Wallet className="w-5 h-5 text-[#C8A96E]" />,
@@ -80,12 +80,12 @@ export default function IntroSolution() {
           </h2>
         </motion.div>
 
-        {/* Description */}
+        {/* ↑ opacity: /80 → /90 untuk deskripsi headline */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-center text-[#1B3A2E]/80 text-lg leading-relaxed max-w-4xl mx-auto mb-20 font-dm"
+          className="text-center text-[#1B3A2E]/90 text-lg leading-relaxed max-w-4xl mx-auto mb-20 font-dm"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           WO biasa urus banyak klien sekaligus, kamu cuma satu dari sekian klien.
@@ -123,7 +123,7 @@ export default function IntroSolution() {
                 200+
               </span>
               <span
-                className="text-white/80 text-[9px] font-dm text-center leading-tight"
+                className="text-white/90 text-[9px] font-dm text-center leading-tight"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 Klien
@@ -153,8 +153,9 @@ export default function IntroSolution() {
                   >
                     {p.title}
                   </h3>
+                  {/* ↑ opacity: /70 → /85 untuk deskripsi pillar */}
                   <p
-                    className="text-[#1B3A2E]/70 text-sm font-dm leading-relaxed"
+                    className="text-[#1B3A2E]/85 text-sm font-dm leading-relaxed"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {p.desc}

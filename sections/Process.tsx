@@ -86,7 +86,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
             </h3>
 
             <p
-              className="text-[#5a5a5a] text-base font-dm leading-relaxed mb-8"
+              className="text-[#3a3a3a] text-base font-dm leading-relaxed mb-8"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               {step.desc}
@@ -97,7 +97,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
               {step.points.map((point) => (
                 <li
                   key={point}
-                  className="flex items-center gap-3 text-sm font-dm text-[#333]"
+                  className="flex items-center gap-3 text-sm font-dm text-[#222]"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
                   <span className="w-5 h-5 rounded-full bg-[#1B3A2E] flex items-center justify-center flex-shrink-0">

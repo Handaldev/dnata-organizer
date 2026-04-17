@@ -77,7 +77,7 @@ export default function CTASection() {
             </h2>
 
             <p
-              className="text-[#FAF8F4]/70 text-base font-dm leading-relaxed mb-8"
+              className="text-[#FAF8F4]/88 text-base font-dm leading-relaxed mb-8"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               Kami hanya handle 4 pernikahan per bulan — supaya setiap klien dapat yang terbaik dari kami. Beberapa tanggal bulan ini sudah terisi. Isi form sekarang untuk cek ketersediaan dan konsultasi{' '}
@@ -106,7 +106,7 @@ export default function CTASection() {
                     </svg>
                   </div>
                   <span
-                    className="text-[#FAF8F4]/70 text-sm font-dm"
+                    className="text-[#FAF8F4]/88 text-sm font-dm"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {item}
@@ -119,7 +119,7 @@ export default function CTASection() {
             <div className="flex items-center gap-4">
               <div className="h-px flex-1 bg-[#FAF8F4]/10" />
               <span
-                className="text-[#FAF8F4]/40 text-xs font-dm"
+                className="text-[#FAF8F4]/65 text-xs font-dm"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 atau
@@ -129,7 +129,7 @@ export default function CTASection() {
 
             <button
               onClick={handleWAClick}
-              className="mt-4 w-full flex items-center justify-center gap-2 py-3.5 border border-[#FAF8F4]/20 text-[#FAF8F4]/80 text-sm font-dm font-medium rounded-xl hover:border-[#C8A96E] hover:text-[#C8A96E] transition-all duration-300"
+              className="mt-4 w-full flex items-center justify-center gap-2 py-3.5 border border-[#FAF8F4]/30 text-[#FAF8F4]/90 text-sm font-dm font-medium rounded-xl hover:border-[#C8A96E] hover:text-[#C8A96E] transition-all duration-300"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
