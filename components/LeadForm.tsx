@@ -11,6 +11,10 @@ import { useRouter } from 'next/navigation'
 const kotaOptions = [
   { value: '', label: 'Pilih Kota / Wilayah' },
   { value: 'Jabodetabek', label: 'Jabodetabek (Jakarta, Bogor, Depok, Tangerang, Bekasi)' },
+  { value: 'Bogor', label: 'Bogor' },
+  { value: 'Depok', label: 'Depok' },
+  { value: 'Tangerang', label: 'Tangerang' },
+  { value: 'Bekasi', label: 'Bekasi' },
   { value: 'Aceh', label: 'Aceh' },
 ]
 
