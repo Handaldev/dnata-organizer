@@ -17,20 +17,11 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden bg-[#FAF8F4]"
     >
-      {/* ── Background image + overlay ── */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero_kanan.webp"
-          alt=""
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        {/* Left-to-right gradient: solid cream on text side, fading to semi-transparent */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1f1f1f] via-[#1f1f1f]/96 via-[#1f1f1f]/56 to-[#1f1f1f]/40" />
-      </div>
+      {/* Decorative background element */}
+      <div
+        className="absolute top-0 right-0 w-1/2 h-full bg-[#1B3A2E]/5 rounded-l-[80px] hidden lg:block"
+        aria-hidden="true"
+      />
 
       {/* Gold accent line */}
       <div
@@ -38,7 +29,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-28 pb-20 w-full relative z-10">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-28 pb-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Column */}
           <div className="order-2 lg:order-1">
@@ -47,7 +38,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 bg-[#C8A96E]/15 border border-[#C8A96E]/40 rounded-full px-4 py-1.5 mb-6"
+              className="inline-flex items-center gap-2 bg-[#C8A96E]/10 border border-[#C8A96E]/30 rounded-full px-4 py-1.5 mb-6"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#C8A96E] inline-block" />
               <span
@@ -80,7 +71,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35 }}
-              className="text-[#3a3a3a] text-lg leading-relaxed mb-8 max-w-lg font-dm"
+              className="text-[#5a5a5a] text-lg leading-relaxed mb-8 max-w-lg font-dm"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               Dinata Organizer bukan WO yang urus 10 klien sekaligus.
@@ -108,7 +99,7 @@ export default function Hero() {
                     {stat.num}
                   </p>
                   <p
-                    className="text-[#555] text-xs font-dm mt-0.5"
+                    className="text-[#888] text-xs font-dm mt-0.5"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {stat.label}
@@ -144,19 +135,33 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Image Column — frosted card floats over the bg image */}
+          {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="order-1 lg:order-2 relative hidden lg:block"
+            className="order-1 lg:order-2 relative"
           >
+            {/* Main image */}
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:max-w-none">
+              <Image
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=90"
+                alt="Momen pernikahan indah diorganisir oleh Dinata Organizer"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A2E]/30 to-transparent" />
+            </div>
+
             {/* Floating card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
+              className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 max-w-[220px]"
             >
               <div className="w-10 h-10 rounded-full bg-[#C8A96E]/20 flex items-center justify-center flex-shrink-0">
                 <span className="text-[#C8A96E] text-lg">✦</span>
@@ -169,13 +174,25 @@ export default function Hero() {
                   Kuota Terbatas
                 </p>
                 <p
-                  className="text-[#555] text-xs font-dm mt-0.5"
+                  className="text-[#888] text-xs font-dm mt-0.5"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
                   Maksimal 4 event/bulan
                 </p>
               </div>
             </motion.div>
+
+
+
+            {/* Decorative dot grid */}
+            <div
+              className="absolute -top-6 -right-6 w-24 h-24 opacity-20"
+              style={{
+                backgroundImage: 'radial-gradient(#1B3A2E 1px, transparent 1px)',
+                backgroundSize: '8px 8px',
+              }}
+              aria-hidden="true"
+            />
           </motion.div>
         </div>
       </div>
@@ -186,7 +203,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-[#555] hover:text-[#1B3A2E] transition-colors z-10"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-[#888] hover:text-[#1B3A2E] transition-colors"
         aria-label="Scroll ke bawah"
       >
         <span
