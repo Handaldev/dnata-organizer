@@ -30,7 +30,7 @@ export default function Hero() {
       />
 
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-28 pb-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="max-w-[1440px] grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Column */}
           <div className="order-2 lg:order-1">
             {/* Badge */}
