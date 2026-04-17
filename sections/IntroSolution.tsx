@@ -76,7 +76,7 @@ export default function IntroSolution() {
             className="font-cormorant text-4xl lg:text-6xl font-semibold text-[#1B3A2E] leading-tight"
             style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
           >
-            Kami Bukan Sekedar Wedding Organizer
+            Kami Bukan Sekedar WO
           </h2>
         </motion.div>
 
