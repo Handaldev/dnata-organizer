@@ -9,7 +9,7 @@ const steps = [
     number: '01',
     title: 'Cerita Dulu, Baru Kita Rancang',
     desc: 'Di sesi pertama, kita tidak langsung bicara soal paket atau harga. Kita duduk bareng — kamu cerita visi pernikahannya seperti apa, budget yang tersedia, dan hal-hal kecil yang penting buat kamu. Dari sana baru kita rancang proposal yang benar-benar pas.',
-    image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=90',
+    image: '/images/proses_1.webp',
     imageAlt: 'Sesi konsultasi wedding planner Dinata Organizer',
     points: [
       'Konsultasi gratis, tanpa komitmen',
@@ -21,7 +21,7 @@ const steps = [
     number: '02',
     title: 'Kami Gerak, Kamu Tenang',
     desc: 'Setelah deal, tim kami langsung turun tangan. Riset vendor terbaik sesuai budget kamu, negosiasi harga, koordinasi jadwal — semua kami handle. Kamu tinggal approve via WhatsApp, sisanya biar kami yang pikirin.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=90',
+    image: '/images/proses_2.webp',
     imageAlt: 'Perencanaan detail pernikahan bersama tim Dinata Organizer',
     points: [
       'Vendor pilihan, sesuai budget',
@@ -33,7 +33,7 @@ const steps = [
     number: '03',
     title: 'Hari H Berjalan Sempurna',
     desc: 'Tim kami standby dari pagi sampai selesai. Koordinasi vendor, troubleshooting, jaga timeline — semua beres di belakang layar tanpa kamu perlu tahu. Kamu fokus nikmatin momen paling spesial dalam hidupmu.',
-    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=90',
+    image: '/images/proses_3.webp',
     imageAlt: 'Hari pernikahan yang sempurna bersama Dinata Organizer',
     points: [
       'Tim on-site full day',

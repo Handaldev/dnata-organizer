@@ -105,7 +105,7 @@ export default function IntroSolution() {
           >
             <div className="rounded-[2rem] overflow-hidden aspect-[3/4] relative shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=90"
+                src="/images/solution.webp"
                 alt="Wedding planner personal Dinata Organizer bekerja dengan pasangan"
                 fill
                 className="object-cover"
