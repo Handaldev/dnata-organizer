@@ -47,7 +47,7 @@ const galleryImages = [
     span: 'col-span-1 row-span-1',
   },
   {
-    src: '/images/testi_9.webp',
+    src: '/images/hero_kanan.webp',
     alt: 'Guest celebration moment',
     span: 'col-span-1 row-span-1',
   },
