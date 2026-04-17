@@ -46,6 +46,15 @@ const galleryImages = [
     src: '/images/testi_10.webp',
     alt: 'Happy couple walking',
   },
+  {
+    src: '/images/hero_kanan.webp',
+    alt: 'Happy couple walking',
+  },
+  {
+    src: '/images/proses_1.webp',
+    alt: 'Happy couple walking',
+  },
+
 ]
 
 // Lightbox Component
