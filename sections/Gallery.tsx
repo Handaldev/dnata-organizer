@@ -7,52 +7,52 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=90',
+    src: '/images/testi_1.webp',
     alt: 'Dekorasi outdoor garden party wedding',
     span: 'col-span-2 row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1561781482-1b4a64b95c16?w=600&q=90',
+    src: '/images/testi_2.webp',
     alt: 'First dance romantic moment',
     span: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=90',
+    src: '/images/testi_3.webp',
     alt: 'Table setting elegant reception',
     span: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=90',
+    src: '/images/testi_4.webp',
     alt: 'Indoor ballroom decoration',
     span: 'col-span-1 row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1503428593586-e225b39bde42?w=600&q=90',
+    src: '/images/testi_5.webp',
     alt: 'Flower arrangement detail',
     span: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=90',
+    src: '/images/testi_6.webp',
     alt: 'Bride and groom portrait',
     span: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=90',
+    src: '/images/testi_7.webp',
     alt: 'Wedding ceremony moment',
     span: 'col-span-2 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&q=90',
+    src: '/images/testi_8.webp',
     alt: 'Wedding cake display',
     span: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=90',
+    src: '/images/testi_9.webp',
     alt: 'Guest celebration moment',
     span: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=90',
+    src: '/images/testi_10.webp',
     alt: 'Happy couple walking',
     span: 'col-span-1 row-span-1',
   },
