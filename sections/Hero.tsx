@@ -30,8 +30,6 @@ export default function Hero() {
         />
         {/* Left-to-right gradient: solid cream on text side, fading to semi-transparent */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1f1f1f] via-[#1f1f1f]/96 via-[#1f1f1f]/56 to-[#1f1f1f]/40" />
-        {/* Subtle bottom vignette */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#f8af1c] to-transparent" />
       </div>
 
       {/* Gold accent line */}
