@@ -9,52 +9,42 @@ const galleryImages = [
   {
     src: '/images/testi_1.webp',
     alt: 'Dekorasi outdoor garden party wedding',
-    span: 'col-span-2 row-span-2',
   },
   {
     src: '/images/testi_2.webp',
     alt: 'First dance romantic moment',
-    span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/testi_3.webp',
     alt: 'Table setting elegant reception',
-    span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/testi_4.webp',
     alt: 'Indoor ballroom decoration',
-    span: 'col-span-1 row-span-2',
   },
   {
     src: '/images/testi_5.webp',
     alt: 'Flower arrangement detail',
-    span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/testi_6.webp',
     alt: 'Bride and groom portrait',
-    span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/testi_7.webp',
     alt: 'Wedding ceremony moment',
-    span: 'col-span-2 row-span-1',
   },
   {
     src: '/images/testi_8.webp',
     alt: 'Wedding cake display',
-    span: 'col-span-1 row-span-1',
   },
   {
-    src: '/images/hero_kanan.webp',
+    src: '/images/teti_9.webp',
     alt: 'Guest celebration moment',
-    span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/testi_10.webp',
     alt: 'Happy couple walking',
-    span: 'col-span-1 row-span-1',
   },
 ]
 
@@ -208,44 +198,56 @@ export default function Gallery() {
             </p>
           </motion.div>
 
-          {/* Masonry Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[140px] md:auto-rows-[180px]">
+          {/* 
+            CSS Columns Masonry — tidak ada bolong karena:
+            - Tinggi tiap item mengikuti aspect ratio foto aslinya (bukan fixed row height)
+            - break-inside: avoid mencegah gambar terpotong antar kolom
+            - Foto mengisi kolom dari atas ke bawah secara natural
+          */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="[column-count:2] md:[column-count:3] lg:[column-count:4] [column-gap:12px]"
+          >
             {galleryImages.map((img, i) => (
               <motion.div
                 key={img.src}
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 0.05 * i }}
-                className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span}`}
+                initial={{ opacity: 0, y: 16 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.05 * i }}
                 onClick={() => openLightbox(i)}
+                className="relative overflow-hidden rounded-xl group cursor-pointer mb-3 [break-inside:avoid]"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  width={600}
+                  height={800}
+                  className="w-full h-auto object-cover block transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
-                {/* Overlay on hover */}
+                {/* Overlay */}
                 <div className="absolute inset-0 bg-[#1B3A2E]/0 group-hover:bg-[#1B3A2E]/30 transition-all duration-500" />
-                {/* Zoom icon on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                  <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B3A2E" strokeWidth="2">
+                {/* Zoom icon */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center shadow-sm">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A2E" strokeWidth="2">
                       <circle cx="11" cy="11" r="8" />
                       <path d="M21 21l-4.35-4.35" />
                       <path d="M11 8v6M8 11h6" />
                     </svg>
                   </div>
                 </div>
-                <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                  <span className="text-white/90 text-xs font-dm truncate" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                {/* Caption */}
+                <div className="absolute inset-x-0 bottom-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/50 to-transparent">
+                  <span className="text-white/90 text-xs truncate block" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     {img.alt}
                   </span>
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* CTA below gallery */}
           <motion.div
