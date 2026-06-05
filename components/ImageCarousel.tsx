@@ -15,7 +15,7 @@ interface ImageCarouselProps {
 export function ImageCarousel({
   images,
   alt,
-  autoSlideInterval = 1500,
+  autoSlideInterval = 2500,
   className = '',
   showControls = true,
 }: ImageCarouselProps) {
@@ -31,7 +31,7 @@ export function ImageCarousel({
   }, [images.length, autoSlideInterval])
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     )
   }
@@ -51,9 +51,8 @@ export function ImageCarousel({
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-500 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <Image
               src={image}
@@ -95,11 +94,10 @@ export function ImageCarousel({
                 key={index}
                 onClick={() => goToSlide(index)}
                 aria-label={`Ke slide ${index + 1}`}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
                     ? 'bg-[#C8A96E] w-6'
                     : 'bg-white/60 hover:bg-white'
-                }`}
+                  }`}
               />
             ))}
           </div>
