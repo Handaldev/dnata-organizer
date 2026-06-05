@@ -15,7 +15,7 @@ interface ImageCarouselProps {
 export function ImageCarousel({
   images,
   alt,
-  autoSlideInterval = 3500,
+  autoSlideInterval = 5000,
   className = '',
   showControls = true,
 }: ImageCarouselProps) {
