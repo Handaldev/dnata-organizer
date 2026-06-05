@@ -15,7 +15,7 @@ interface ImageCarouselProps {
 export function ImageCarousel({
   images,
   alt,
-  autoSlideInterval = 2500,
+  autoSlideInterval = 3500,
   className = '',
   showControls = true,
 }: ImageCarouselProps) {
@@ -95,8 +95,8 @@ export function ImageCarousel({
                 onClick={() => goToSlide(index)}
                 aria-label={`Ke slide ${index + 1}`}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? 'bg-[#C8A96E] w-6'
-                    : 'bg-white/60 hover:bg-white'
+                  ? 'bg-[#C8A96E] w-6'
+                  : 'bg-white/60 hover:bg-white'
                   }`}
               />
             ))}
