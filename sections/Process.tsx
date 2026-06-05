@@ -3,30 +3,13 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
-import { ImageCarousel } from '@/components/ImageCarousel'
-
-// Process step images - mudah diubah di sini
-const processImages = {
-  step1: [
-    '/images/proses_1.webp',
-    '/images/proses_1.webp', // tambah/ubah gambar di sini
-  ],
-  step2: [
-    '/images/proses_2.webp',
-    '/images/proses_2.webp', // tambah/ubah gambar di sini
-  ],
-  step3: [
-    '/images/proses_3.webp',
-    '/images/proses_3.webp', // tambah/ubah gambar di sini
-  ],
-}
 
 const steps = [
   {
     number: '01',
     title: 'Cerita Dulu, Baru Kita Rancang',
     desc: 'Di sesi pertama, kita tidak langsung bicara soal paket atau harga. Kita duduk bareng — kamu cerita visi pernikahannya seperti apa, budget yang tersedia, dan hal-hal kecil yang penting buat kamu. Dari sana baru kita rancang proposal yang benar-benar pas.',
-    images: processImages.step1,
+    image: '/images/proses_1.webp',
     imageAlt: 'Sesi konsultasi wedding planner Dinata Organizer',
     points: [
       'Konsultasi gratis, tanpa komitmen',
@@ -38,7 +21,7 @@ const steps = [
     number: '02',
     title: 'Kami Gerak, Kamu Tenang',
     desc: 'Setelah deal, tim kami langsung turun tangan. Riset vendor terbaik sesuai budget kamu, negosiasi harga, koordinasi jadwal — semua kami handle. Kamu tinggal approve via WhatsApp, sisanya biar kami yang pikirin.',
-    images: processImages.step2,
+    image: '/images/proses_2.webp',
     imageAlt: 'Perencanaan detail pernikahan bersama tim Dinata Organizer',
     points: [
       'Vendor pilihan, sesuai budget',
@@ -50,7 +33,7 @@ const steps = [
     number: '03',
     title: 'Hari H Berjalan Sempurna',
     desc: 'Tim kami standby dari pagi sampai selesai. Koordinasi vendor, troubleshooting, jaga timeline — semua beres di belakang layar tanpa kamu perlu tahu. Kamu fokus nikmatin momen paling spesial dalam hidupmu.',
-    images: processImages.step3,
+    image: '/images/proses_3.webp',
     imageAlt: 'Hari pernikahan yang sempurna bersama Dinata Organizer',
     points: [
       'Tim on-site full day',
@@ -134,7 +117,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
             </ul>
           </motion.div>
 
-          {/* Image Carousel */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 32 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -142,14 +125,14 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
             className={index % 2 === 1 ? 'lg:order-1' : ''}
           >
             <div className="rounded-[2rem] overflow-hidden aspect-[4/3] relative shadow-2xl">
-              <ImageCarousel
-                images={step.images}
+              <Image
+                src={step.image}
                 alt={step.imageAlt}
-                autoSlideInterval={1500}
-                className="w-full h-full"
-                showControls={true}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1B3A2E]/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1B3A2E]/10 to-transparent" />
             </div>
           </motion.div>
         </div>
