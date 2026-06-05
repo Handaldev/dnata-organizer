@@ -20,13 +20,13 @@ const steps = [
   {
     number: '02',
     title: 'Kami Gerak, Kamu Tenang',
-    desc: 'Setelah deal, tim kami langsung turun tangan. Riset vendor terbaik sesuai budget kamu, negosiasi harga, koordinasi jadwal — semua kami handle. Kamu tinggal approve via WhatsApp, sisanya biar kami yang pikirin.',
+    desc: 'Setelah deal, tim kami langsung turun tangan. Riset vendor terbaik sesuai budget dan konsep kamu, negosiasi harga, koordinasi jadwal — semua kami handle. Kamu tinggal approve via WhatsApp, sisanya biar kami yang pikirin.',
     image: '/images/proses_2.webp',
     imageAlt: 'Perencanaan detail pernikahan bersama tim Dinata Organizer',
     points: [
       'Vendor pilihan, sesuai budget',
       'Negosiasi harga terbaik untuk kamu',
-      'Update progress tiap minggu via WA',
+      'To-do-list Vendor bulanan',
     ],
   },
   {
