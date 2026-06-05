@@ -10,8 +10,11 @@ import { ImageCarousel } from '@/components/ImageCarousel'
 // Hero images - mudah diubah di sini
 const heroImages = [
   '/images/hero_kanan.webp',
-  '/images/hero_kanan.webp', // tambah/ubah gambar di sini
-  '/images/hero_kanan.webp', // tambah/ubah gambar di sini
+  '/images/testi_1.webp', // tambah/ubah gambar di sini
+  '/images/testi_2.webp', // tambah/ubah gambar di sini
+  '/images/testi_3.webp', // tambah/ubah gambar di sini
+  '/images/testi_4.webp', // tambah/ubah gambar di sini
+  '/images/testi_5.webp', // tambah/ubah gambar di sini
 ]
 
 export default function Hero() {
