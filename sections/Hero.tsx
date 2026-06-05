@@ -98,8 +98,8 @@ export default function Hero() {
               className="flex items-center gap-8 mb-10"
             >
               {[
-                { num: '200+', label: 'Pernikahan Sukses' },
-                { num: '7+', label: 'Tahun Pengalaman' },
+                { num: '300+', label: 'Pernikahan Sukses' },
+                { num: '8+', label: 'Tahun Pengalaman' },
                 { num: '100%', label: 'On Budget' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
