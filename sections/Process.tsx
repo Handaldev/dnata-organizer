@@ -1,7 +1,7 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { useRef, useState, useEffect } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Play } from 'lucide-react'
 
 // Video configuration - mudah diubah kedepannya
@@ -52,11 +52,13 @@ function VideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
 
   return (
-    <div className="sticky top-20 h-fit">
+    <div className="sticky top-1/2 -translate-y-1/2 h-fit">
       <div className="rounded-[2rem] overflow-hidden aspect-[9/16] lg:aspect-[3/4] relative shadow-2xl bg-black">
         {!isPlaying ? (
-          <div className="absolute inset-0 bg-black/80 flex items-center justify-center cursor-pointer group"
-            onClick={() => setIsPlaying(true)}>
+          <div
+            className="absolute inset-0 bg-black/80 flex items-center justify-center cursor-pointer group"
+            onClick={() => setIsPlaying(true)}
+          >
             <button
               className="w-16 h-16 rounded-full bg-[#C8A96E] flex items-center justify-center hover:bg-[#C8A96E]/90 transition-colors group-hover:scale-110 duration-300"
               aria-label="Play video"
@@ -89,10 +91,10 @@ function StepContent({ step, index }: { step: typeof steps[0]; index: number }) 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0.3, y: 20 }}
-      transition={{ duration: 0.6 }}
-      className="py-32"
+      initial={{ opacity: 0, y: 32 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
+      transition={{ duration: 0.7 }}
+      className="sticky top-1/2 -translate-y-1/2 py-0"
     >
       {/* Step number with label */}
       <div className="flex items-center gap-4 mb-8">
@@ -157,13 +159,18 @@ function StepContent({ step, index }: { step: typeof steps[0]; index: number }) 
 export default function Process() {
   const headerRef = useRef(null)
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' })
+  const containerRef = useRef(null)
 
   return (
-    <section id="proses" className="bg-[#FAF8F4]">
+    <section
+      id="proses"
+      ref={containerRef}
+      className="bg-[#FAF8F4] min-h-screen flex flex-col"
+    >
       {/* Section header */}
       <div
         ref={headerRef}
-        className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-28 pb-12 text-center"
+        className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 pt-20 pb-8 text-center w-full"
       >
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -186,24 +193,28 @@ export default function Process() {
         </motion.h2>
       </div>
 
-      {/* Main content with sticky video */}
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Video - Sticky on scroll */}
-          <div className="hidden lg:block">
-            <VideoPlayer />
-          </div>
+      {/* Main content with sticky video and text */}
+      <div className="flex-1 flex items-stretch w-full">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch h-full">
+            {/* Video - Sticky on scroll */}
+            <div className="hidden lg:flex items-center justify-center">
+              <VideoPlayer />
+            </div>
 
-          {/* Mobile video player */}
-          <div className="lg:hidden mb-12">
-            <VideoPlayer />
-          </div>
+            {/* Mobile video player */}
+            <div className="lg:hidden mb-12">
+              <VideoPlayer />
+            </div>
 
-          {/* Steps content - scrollable text */}
-          <div>
-            {steps.map((step, i) => (
-              <StepContent key={step.number} step={step} index={i} />
-            ))}
+            {/* Steps content - scrollable text with sticky effect */}
+            <div className="space-y-20">
+              {steps.map((step, i) => (
+                <StepContent key={step.number} step={step} index={i} />
+              ))}
+              {/* Extra space at bottom for scroll effect */}
+              <div className="h-96" />
+            </div>
           </div>
         </div>
       </div>
