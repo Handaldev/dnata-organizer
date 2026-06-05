@@ -263,8 +263,14 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center mt-12"
+            className="text-center mt-16"
           >
+            <p
+              className="text-[#5a5a5a] text-base font-dm mb-5"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              Lihat portofolio lainnya di sosial media kami
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="https://www.instagram.com/dinata.organizer/reels/"
