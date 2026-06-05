@@ -131,7 +131,7 @@ export default function IntroSolution() {
                 className="font-cormorant text-white font-bold text-lg leading-none"
                 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
               >
-                200+
+                300+
               </span>
               <span
                 className="text-white/80 text-[9px] font-dm text-center leading-tight"
