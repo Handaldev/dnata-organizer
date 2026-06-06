@@ -48,7 +48,7 @@ function VideoPlayer() {
 
   return (
     <div className="sticky top-20 h-fit">
-      <div className="rounded-[2rem] overflow-hidden aspect-[9/16] lg:aspect-[3/4] relative shadow-2xl bg-black w-full max-w-sm">
+      <div className="rounded-[2rem] overflow-hidden aspect-[9/16] relative shadow-2xl bg-black w-full">
         {!isPlaying ? (
           <div
             className="relative w-full h-full cursor-pointer group"
@@ -92,7 +92,7 @@ function StepContent({ step }: { step: typeof steps[0] }) {
   const inView = useInView(ref, { margin: '-40% 0px -40% 0px' })
 
   return (
-    <div ref={ref} className="min-h-screen py-28 flex items-center">
+    <div ref={ref} className="py-12 lg:py-16 flex items-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -194,7 +194,7 @@ export default function Process() {
 
       {/* Main content */}
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Video - Left side, sticky */}
           <div className="hidden lg:block">
             <VideoPlayer />
