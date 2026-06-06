@@ -38,7 +38,7 @@ function VideoEmbed({ videoId, title }: { videoId: string; title: string }) {
   const [playing, setPlaying] = useState(false)
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-[#E8DDD5] aspect-[9/16] relative bg-black w-full">
+    <div className="rounded-2xl overflow-hidden border border-[#E8DDD5] relative bg-black w-full" style={{ aspectRatio: "9/16", maxHeight: "70vh" }}>
       {!playing ? (
         <div
           onClick={() => setPlaying(true)}
@@ -83,9 +83,8 @@ function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: 0.1 }}
-      className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-        index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
-      }`}
+      className={`grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center ${index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
+        }`}
     >
       {/* Text side */}
       <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
@@ -127,7 +126,7 @@ function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
       </div>
 
       {/* Video side */}
-      <div className={`max-w-xs mx-auto w-full lg:max-w-none ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+      <div className={`max-w-xs mx-auto w-full lg:max-w-sm ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
         <VideoEmbed videoId={row.videoId} title={row.title} />
       </div>
     </motion.div>
