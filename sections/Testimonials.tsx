@@ -90,12 +90,13 @@ function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
             </div>
           ) : (
             <iframe
+              key={`${row.videoId}-playing`}
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${row.videoId}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${row.videoId}?autoplay=1&mute=0&rel=0&playsinline=1`}
               title={row.title}
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
             />
