@@ -315,7 +315,7 @@ export default function Packages() {
 
   const currentTab = packageTabs.find((tab) => tab.id === activeTab)!
   const isCustomTab = 'isCustom' in currentTab && currentTab.isCustom
-  const currentCards = 'cards' in currentTab ? currentTab.cards : []
+  const currentCards: PackageCardType[] = 'cards' in currentTab ? currentTab.cards : []
 
   return (
     <section
