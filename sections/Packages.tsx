@@ -314,6 +314,8 @@ export default function Packages() {
   const [activeTab, setActiveTab] = useState('wedding-planner')
 
   const currentTab = packageTabs.find((tab) => tab.id === activeTab)!
+  const isCustomTab = 'isCustom' in currentTab && currentTab.isCustom
+  const currentCards = 'cards' in currentTab ? currentTab.cards : []
 
   return (
     <section
@@ -381,17 +383,17 @@ export default function Packages() {
         </motion.div>
 
         {/* Cards Grid */}
-        {'isCustom' in currentTab && currentTab.isCustom ? (
+        {isCustomTab ? (
           <CustomPackage />
         ) : (
           <>
             <div
-              className={`grid gap-6 mb-8 ${'cards' in currentTab && currentTab.cards.length === 3
+              className={`grid gap-6 mb-8 ${currentCards.length === 3
                 ? 'grid-cols-1 lg:grid-cols-3'
                 : 'grid-cols-1 lg:grid-cols-2'
                 }`}
             >
-              {'cards' in currentTab && currentTab.cards.map((card, i) => (
+              {currentCards.map((card, i) => (
                 <PackageCard key={card.id} card={card} index={i} />
               ))}
             </div>
