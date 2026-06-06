@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react'
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import { Play } from 'lucide-react'
 
@@ -31,8 +31,34 @@ const steps = [
 
 function VideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  const sendCommand = useCallback((cmd: 'playVideo' | 'pauseVideo') => {
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: 'command', func: cmd, args: [] }),
+      '*'
+    )
+  }, [])
+
+  useEffect(() => {
+    if (!isPlaying) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          sendCommand('playVideo')
+        } else {
+          sendCommand('pauseVideo')
+        }
+      },
+      { threshold: 0.3 }
+    )
+    if (containerRef.current) observer.observe(containerRef.current)
+    return () => observer.disconnect()
+  }, [isPlaying, sendCommand])
+
   return (
-    <div className="w-full h-full rounded-[2rem] overflow-hidden relative shadow-2xl bg-black">
+    <div ref={containerRef} className="w-full h-full rounded-[2rem] overflow-hidden relative shadow-2xl bg-black">
       {!isPlaying ? (
         <div className="relative w-full h-full cursor-pointer group" onClick={() => setIsPlaying(true)}>
           <img
@@ -48,9 +74,10 @@ function VideoPlayer() {
         </div>
       ) : (
         <iframe
+          ref={iframeRef}
           key="process-video-playing"
           width="100%" height="100%"
-          src={`https://www.youtube.com/embed/${videoConfig.videoId}?autoplay=1&mute=0&rel=0&playsinline=1`}
+          src={`https://www.youtube.com/embed/${videoConfig.videoId}?autoplay=1&mute=0&rel=0&playsinline=1&enablejsapi=1`}
           title="Dinata Organizer Process Video"
           frameBorder="0"
           allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
