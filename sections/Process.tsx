@@ -104,8 +104,10 @@ function DesktopProcess() {
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20 h-full grid lg:grid-cols-2 gap-8 lg:gap-12 py-10">
           {/* Left — video fills full height */}
-          <div className="h-full">
-            <VideoPlayer />
+          <div className="flex items-center" style={{ maxHeight: "calc(100vh - 5rem)" }}>
+            <div className="w-full" style={{ aspectRatio: "9/16", maxHeight: "calc(100vh - 5rem)" }}>
+              <VideoPlayer />
+            </div>
           </div>
           {/* Right — steps fade in/out driven by scroll */}
           <div className="relative h-full">
