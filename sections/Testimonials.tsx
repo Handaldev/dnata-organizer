@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Play } from 'lucide-react'
 
@@ -36,9 +36,42 @@ const videoRows = [
 
 function VideoEmbed({ videoId, title }: { videoId: string; title: string }) {
   const [playing, setPlaying] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  // Send postMessage command to YouTube IFrame API
+  const sendCommand = useCallback((cmd: 'playVideo' | 'pauseVideo') => {
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: 'command', func: cmd, args: [] }),
+      '*'
+    )
+  }, [])
+
+  // IntersectionObserver — pause when out of view, play when back in view
+  useEffect(() => {
+    if (!playing) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          sendCommand('playVideo')
+        } else {
+          sendCommand('pauseVideo')
+        }
+      },
+      { threshold: 0.3 } // trigger when 30% of video is visible
+    )
+
+    if (containerRef.current) observer.observe(containerRef.current)
+    return () => observer.disconnect()
+  }, [playing, sendCommand])
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-[#E8DDD5] relative bg-black w-full" style={{ aspectRatio: "9/16", maxHeight: "70vh" }}>
+    <div
+      ref={containerRef}
+      className="rounded-2xl overflow-hidden border border-[#E8DDD5] relative bg-black w-full"
+      style={{ aspectRatio: '9/16', maxHeight: '70vh' }}
+    >
       {!playing ? (
         <div
           onClick={() => setPlaying(true)}
@@ -57,10 +90,12 @@ function VideoEmbed({ videoId, title }: { videoId: string; title: string }) {
         </div>
       ) : (
         <iframe
+          ref={iframeRef}
           key={`${videoId}-playing`}
           width="100%"
           height="100%"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&playsinline=1`}
+          // enablejsapi=1 wajib agar postMessage bisa mengontrol player
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&playsinline=1&enablejsapi=1`}
           title={title}
           frameBorder="0"
           allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -83,12 +118,12 @@ function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: 0.1 }}
-      className={`grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center ${index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
-        }`}
+      className={`grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center ${
+        index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
+      }`}
     >
       {/* Text side */}
       <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
-        {/* Number */}
         <p
           className="font-cormorant text-8xl font-bold text-[#C8A96E]/15 leading-none select-none mb-2"
           style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
@@ -96,24 +131,18 @@ function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
         >
           {row.number}
         </p>
-
-        {/* Title */}
         <h3
           className="font-cormorant text-3xl lg:text-4xl font-semibold text-[#1B3A2E] leading-tight mb-5 -mt-4"
           style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
         >
           {row.title}
         </h3>
-
-        {/* Description */}
         <p
           className="text-[#5a5a5a] text-base font-dm leading-relaxed mb-6"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           {row.description}
         </p>
-
-        {/* Source badge */}
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96E]" />
           <span
@@ -140,7 +169,6 @@ export default function Testimonials() {
   return (
     <section id="testimoni" className="py-28 lg:py-36 bg-[#FAF7F2]">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 xl:px-20">
-        {/* Header */}
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 24 }}
@@ -175,7 +203,6 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        {/* Video rows */}
         <div>
           {videoRows.map((row, index) => (
             <VideoRow key={row.id} row={row} index={index} />
