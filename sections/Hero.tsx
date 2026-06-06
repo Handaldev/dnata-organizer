@@ -5,6 +5,17 @@ import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { getWhatsAppLink } from '@/lib/utils'
 import { trackWhatsAppClick } from '@/lib/analytics'
+import { ImageCarousel } from '@/components/ImageCarousel'
+
+// Hero images - mudah diubah di sini
+const heroImages = [
+  '/images/hero_kanan.webp',
+  '/images/testi_1.webp', // tambah/ubah gambar di sini
+  '/images/testi_2.webp', // tambah/ubah gambar di sini
+  '/images/testi_3.webp', // tambah/ubah gambar di sini
+  '/images/testi_4.webp', // tambah/ubah gambar di sini
+  '/images/testi_5.webp', // tambah/ubah gambar di sini
+]
 
 export default function Hero() {
   const handleWAClick = () => {
@@ -87,8 +98,8 @@ export default function Hero() {
               className="flex items-center gap-8 mb-10"
             >
               {[
-                { num: '200+', label: 'Pernikahan Sukses' },
-                { num: '7+', label: 'Tahun Pengalaman' },
+                { num: '300+', label: 'Pernikahan Sukses' },
+                { num: '8+', label: 'Tahun Pengalaman' },
                 { num: '100%', label: 'On Budget' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
@@ -135,25 +146,24 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Image Column */}
+          {/* Image Carousel Column */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
             className="order-1 lg:order-2 relative"
           >
-            {/* Main image */}
+            {/* Main carousel */}
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:max-w-none">
-              <Image
-                src="/images/hero_kanan.webp"
+              <ImageCarousel
+                images={heroImages}
                 alt="Momen pernikahan indah diorganisir oleh Dinata Organizer"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
+                autoSlideInterval={1500}
+                className="w-full h-full"
+                showControls={true}
               />
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A2E]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A2E]/30 to-transparent pointer-events-none" />
             </div>
 
             {/* Floating card */}
@@ -181,8 +191,6 @@ export default function Hero() {
                 </p>
               </div>
             </motion.div>
-
-
 
             {/* Decorative dot grid */}
             <div
@@ -217,3 +225,4 @@ export default function Hero() {
     </section>
   )
 }
+

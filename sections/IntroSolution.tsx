@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
+import { ImageCarousel } from '@/components/ImageCarousel'
 import {
   Shuffle,        // Full Handle A–Z
   UserCheck,      // 1 Personal Planner Dedicated
@@ -10,6 +11,16 @@ import {
   NotebookPen,    // Ingat Setiap Detail Kamu
   Network         // Vendor Network Eksklusif
 } from 'lucide-react'
+
+// Intro Solution images - mudah diubah di sini
+const introImages = [
+  '/images/solution.webp',
+  '/images/testi_1.webp', // tambah/ubah gambar di sini
+  '/images/testi_2.webp', // tambah/ubah gambar di sini
+  '/images/testi_3.webp', // tambah/ubah gambar di sini
+  '/images/testi_4.webp', // tambah/ubah gambar di sini
+  '/images/testi_5.webp', // tambah/ubah gambar di sini
+]
 
 const pillars = [
   {
@@ -96,7 +107,7 @@ export default function IntroSolution() {
 
         {/* Split layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
+          {/* Image Carousel */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -104,14 +115,14 @@ export default function IntroSolution() {
             className="relative"
           >
             <div className="rounded-[2rem] overflow-hidden aspect-[3/4] relative shadow-xl">
-              <Image
-                src="/images/solution.webp"
+              <ImageCarousel
+                images={introImages}
                 alt="Wedding planner personal Dinata Organizer bekerja dengan pasangan"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                autoSlideInterval={1500}
+                className="w-full h-full"
+                showControls={true}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A2E]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A2E]/20 to-transparent pointer-events-none" />
             </div>
 
             {/* Award badge */}
@@ -120,7 +131,7 @@ export default function IntroSolution() {
                 className="font-cormorant text-white font-bold text-lg leading-none"
                 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
               >
-                200+
+                300+
               </span>
               <span
                 className="text-white/80 text-[9px] font-dm text-center leading-tight"
