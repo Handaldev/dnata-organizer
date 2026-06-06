@@ -20,7 +20,7 @@ const videoRows = [
     title: 'Kompilasi Wedding Expo',
     description:
       'Behind the scenes & momen seru dari berbagai wedding expo yang kami ikuti — lihat energi tim kami langsung.',
-    videoId: 'YP22ag__avHE',
+    videoId: 'P22ag__avHE',
     source: 'YouTube',
   },
   {
@@ -118,9 +118,8 @@ function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: 0.1 }}
-      className={`grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center ${
-        index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
-      }`}
+      className={`grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center ${index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
+        }`}
     >
       {/* Text side */}
       <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
