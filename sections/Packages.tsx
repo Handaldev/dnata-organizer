@@ -32,7 +32,7 @@ const packageTabs = [
         name: 'Grand Wedding Planner',
         category: 'Planner',
         description: 'Untuk pernikahan besar dengan tamu ramai — semua terorganisir rapi dan megah.',
-        image: '/images/package-grand.webp',
+        image: '/images/proses_2.webp',
       },
       {
         id: 'praeevent',
@@ -54,21 +54,21 @@ const packageTabs = [
         name: 'Intimate WO on the Day',
         category: 'WO on the Day',
         description: 'Koordinasi penuh hari H untuk pernikahan skala intim, tim standby dari pagi.',
-        image: '/images/package-wo-intimate.webp',
+        image: '/images/solution.webp',
       },
       {
         id: 'wo-basic',
         name: 'Basic WO on the Day',
         category: 'WO on the Day',
         description: 'Pengawasan & koordinasi semua vendor di hari H tanpa kamu perlu khawatir.',
-        image: '/images/package-wo-basic.webp',
+        image: '/images/testi_1.webp',
       },
       {
         id: 'wo-grand',
         name: 'Grand WO on the Day',
         category: 'WO on the Day',
         description: 'Tim lengkap untuk grand wedding — koordinasi skala besar berjalan mulus.',
-        image: '/images/package-wo-grand.webp',
+        image: '/images/testi_2.webp',
       },
       {
         id: 'wo-praevent',
@@ -161,11 +161,10 @@ function PackageCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={`relative rounded-2xl overflow-hidden group ${
-        card.featured
-          ? 'border-2 border-[#C8A96E] shadow-lg'
-          : 'border border-[#E8DDD5]'
-      }`}
+      className={`relative rounded-2xl overflow-hidden group ${card.featured
+        ? 'border-2 border-[#C8A96E] shadow-lg'
+        : 'border border-[#E8DDD5]'
+        }`}
     >
       {/* Image container */}
       <div className="relative aspect-video bg-gray-200 overflow-hidden">
@@ -359,11 +358,10 @@ export default function Packages() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`font-dm font-medium text-sm px-6 py-3 rounded-full transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-[#9C7B5A] text-white'
-                  : 'border-2 border-[#9C7B5A] text-[#1B3A2E] hover:bg-[#9C7B5A]/10'
-              }`}
+              className={`font-dm font-medium text-sm px-6 py-3 rounded-full transition-all duration-300 ${activeTab === tab.id
+                ? 'bg-[#9C7B5A] text-white'
+                : 'border-2 border-[#9C7B5A] text-[#1B3A2E] hover:bg-[#9C7B5A]/10'
+                }`}
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               {tab.label}
@@ -377,11 +375,10 @@ export default function Packages() {
         ) : (
           <>
             <div
-              className={`grid gap-6 mb-8 ${
-                currentTab.cards.length === 3
-                  ? 'grid-cols-1 lg:grid-cols-3'
-                  : 'grid-cols-1 lg:grid-cols-2'
-              }`}
+              className={`grid gap-6 mb-8 ${currentTab.cards.length === 3
+                ? 'grid-cols-1 lg:grid-cols-3'
+                : 'grid-cols-1 lg:grid-cols-2'
+                }`}
             >
               {currentTab.cards.map((card, i) => (
                 <PackageCard key={card.id} card={card} index={i} />
