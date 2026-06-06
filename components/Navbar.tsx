@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils'
 const navLinks = [
   { label: 'Layanan', href: '#layanan' },
   { label: 'Proses', href: '#proses' },
+  { label: 'Paket Layanan', href: '#paket' },
   { label: 'Galeri', href: '#galeri' },
   { label: 'Testimoni', href: '#testimoni' },
 ]

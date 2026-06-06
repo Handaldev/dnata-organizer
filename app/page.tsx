@@ -19,8 +19,8 @@ export default function HomePage() {
         <Problem />
         <IntroSolution />
         <Process />
-        <Gallery />
         <Packages />
+        <Gallery />
         <Testimonials />
         <CTASection />
       </main>
