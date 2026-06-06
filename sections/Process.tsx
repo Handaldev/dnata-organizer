@@ -70,12 +70,13 @@ function VideoPlayer() {
           </div>
         ) : (
           <iframe
+            key="process-video-playing"
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0&rel=0&playsinline=1"
             title="Dinata Organizer Process Video"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full"
           />
