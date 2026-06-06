@@ -18,7 +18,7 @@ const packageTabs = [
         name: 'Intimate Wedding Planner',
         category: 'Planner',
         description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat.',
-        image: '/images/package-intimate.webp',
+        image: '/images/hero_kanan.webp',
       },
       {
         id: 'basic',
