@@ -39,7 +39,7 @@ const packageTabs = [
         name: 'Pra Event Planner',
         category: 'Planner',
         description: 'Siraman, pengajian, engagement — direncanakan dengan detail yang sama seriusnya.',
-        image: '/images/package-praevent.webp',
+        image: '/images/proses_3.webp',
       },
     ],
   },
