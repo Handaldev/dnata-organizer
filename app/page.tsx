@@ -4,6 +4,7 @@ import Problem from '@/sections/Problem'
 import IntroSolution from '@/sections/IntroSolution'
 import Process from '@/sections/Process'
 import Gallery from '@/sections/Gallery'
+import Packages from '@/sections/Packages'
 import Testimonials from '@/sections/Testimonials'
 import CTASection from '@/sections/CTASection'
 import Footer from '@/components/Footer'
@@ -19,6 +20,7 @@ export default function HomePage() {
         <IntroSolution />
         <Process />
         <Gallery />
+        <Packages />
         <Testimonials />
         <CTASection />
       </main>
