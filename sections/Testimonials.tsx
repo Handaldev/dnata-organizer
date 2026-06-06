@@ -4,138 +4,139 @@ import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Play } from 'lucide-react'
 
-// Videos configuration - easy to customize
-const videos = [
+const videoRows = [
   {
     id: 1,
-    label: 'Best Wedding',
-    title: 'Best Wedding Highlights',
-    description: 'Highlight pernikahan terbaik yang pernah kami tangani — full cinematic.',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube ID
+    number: '01',
+    title: 'Video Best Wedding',
+    description:
+      'Highlight pernikahan terbaik yang pernah kami tangani — setiap momen diabadikan dengan sinematografi penuh perasaan.',
+    videoId: 'YOUTUBE_ID_1',
+    source: 'YouTube',
   },
   {
     id: 2,
-    label: 'Wedding Expo',
+    number: '02',
     title: 'Kompilasi Wedding Expo',
-    description: 'Behind the scenes & momen seru dari berbagai wedding expo yang kami ikuti.',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube ID
+    description:
+      'Behind the scenes & momen seru dari berbagai wedding expo yang kami ikuti — lihat energi tim kami langsung.',
+    videoId: 'YOUTUBE_ID_2',
+    source: 'YouTube',
   },
   {
     id: 3,
-    label: 'Testimoni',
+    number: '03',
     title: 'Kompilasi Testimoni Klien',
-    description: 'Langsung dari mulut klien kami — cerita mereka setelah hari H berlalu.',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube ID
+    description:
+      'Langsung dari mulut klien kami — cerita nyata mereka tentang pengalaman bekerja sama dengan Dinata Organizer.',
+    videoId: 'YOUTUBE_ID_3',
+    source: 'YouTube',
   },
 ]
 
-// Main player component
-function MainPlayer({ video, playing, onPlay }: { video: typeof videos[0]; playing: boolean; onPlay: () => void }) {
+function VideoEmbed({ videoId, title }: { videoId: string; title: string }) {
+  const [playing, setPlaying] = useState(false)
+
   return (
-    <div className="rounded-2xl overflow-hidden border border-[#E8DDD5] aspect-[9/16] relative bg-neutral-900">
-      {playing ? (
-        <iframe
-          key={`${video.videoId}-playing`}
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1&mute=0&rel=0&playsinline=1`}
-          title={video.title}
-          frameBorder="0"
-          allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full border-0"
-        />
-      ) : (
-        <div onClick={onPlay} className="relative w-full h-full cursor-pointer group">
+    <div className="rounded-2xl overflow-hidden border border-[#E8DDD5] aspect-[9/16] relative bg-black w-full">
+      {!playing ? (
+        <div
+          onClick={() => setPlaying(true)}
+          className="relative w-full h-full cursor-pointer group"
+        >
           <img
-            src={`https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg`}
-            alt={video.title}
-            className="w-full h-full object-cover opacity-80"
+            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            alt={`${title} thumbnail`}
+            className="w-full h-full object-cover opacity-90"
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-            <div className="w-16 h-16 rounded-full bg-[#C8A96E]/90 flex items-center justify-center group-hover:bg-[#C8A96E] transition-colors">
-              <Play className="w-6 h-6 text-white ml-1 fill-white" />
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+            <div className="w-16 h-16 rounded-full bg-[#C8A96E]/90 flex items-center justify-center group-hover:bg-[#C8A96E] group-hover:scale-105 transition-all duration-300">
+              <Play className="w-6 h-6 text-white fill-white ml-1" />
             </div>
           </div>
         </div>
+      ) : (
+        <iframe
+          key={`${videoId}-playing`}
+          width="100%"
+          height="100%"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&playsinline=1`}
+          title={title}
+          frameBorder="0"
+          allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
       )}
     </div>
   )
 }
 
-// Thumbnail card component
-function ThumbnailCard({
-  video,
-  isActive,
-  onClick,
-}: {
-  video: typeof videos[0]
-  isActive: boolean
-  onClick: () => void
-}) {
+function VideoRow({ row, index }: { row: typeof videoRows[0]; index: number }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const isEven = index % 2 === 0
+
   return (
-    <div
-      onClick={onClick}
-      className={`rounded-xl overflow-hidden cursor-pointer transition-all aspect-[9/16] relative bg-neutral-900 ${
-        isActive ? 'border-2 border-[#C8A96E]' : 'border border-[#E8DDD5] opacity-50 hover:opacity-75'
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 32 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay: 0.1 }}
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
+        index < videoRows.length - 1 ? 'pb-20 border-b border-[#E8DDD5] mb-20' : ''
       }`}
     >
-      <img
-        src={`https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg`}
-        alt={video.label}
-        className="w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-8 h-8 rounded-full bg-[#C8A96E]/85 flex items-center justify-center">
-          <Play className="w-3 h-3 text-white ml-0.5 fill-white" />
+      {/* Text side */}
+      <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
+        {/* Number */}
+        <p
+          className="font-cormorant text-8xl font-bold text-[#C8A96E]/15 leading-none select-none mb-2"
+          style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+          aria-hidden="true"
+        >
+          {row.number}
+        </p>
+
+        {/* Title */}
+        <h3
+          className="font-cormorant text-3xl lg:text-4xl font-semibold text-[#1B3A2E] leading-tight mb-5 -mt-4"
+          style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+        >
+          {row.title}
+        </h3>
+
+        {/* Description */}
+        <p
+          className="text-[#5a5a5a] text-base font-dm leading-relaxed mb-6"
+          style={{ fontFamily: 'DM Sans, sans-serif' }}
+        >
+          {row.description}
+        </p>
+
+        {/* Source badge */}
+        <div className="flex items-center gap-2">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96E]" />
+          <span
+            className="text-[#9C7B5A] text-xs font-dm tracking-wide"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            {row.source}
+          </span>
         </div>
       </div>
-      <div className="absolute bottom-2 left-0 right-0 text-center">
-        <span className="text-[10px] text-white/80 bg-black/40 px-2 py-0.5 rounded">{video.label}</span>
-      </div>
-    </div>
-  )
-}
 
-// Mobile pill tab component
-function PillTab({
-  video,
-  isActive,
-  onClick,
-}: {
-  video: typeof videos[0]
-  isActive: boolean
-  onClick: () => void
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`px-4 py-2 rounded-full whitespace-nowrap text-sm font-dm transition-all ${
-        isActive
-          ? 'bg-[#C8A96E] text-white'
-          : 'border border-[#C8A96E] text-[#C8A96E] bg-transparent hover:bg-[#C8A96E]/10'
-      }`}
-      style={{ fontFamily: 'DM Sans, sans-serif' }}
-    >
-      {video.label}
-    </button>
+      {/* Video side */}
+      <div className={`max-w-xs mx-auto w-full lg:max-w-none ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+        <VideoEmbed videoId={row.videoId} title={row.title} />
+      </div>
+    </motion.div>
   )
 }
 
 export default function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [playing, setPlaying] = useState(false)
   const headerRef = useRef(null)
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' })
-  const contentRef = useRef(null)
-  const contentInView = useInView(contentRef, { once: true, margin: '-100px' })
-
-  const handleSwitch = (index: number) => {
-    setActiveIndex(index)
-    setPlaying(false)
-  }
-
-  const activeVideo = videos[activeIndex]
 
   return (
     <section id="testimoni" className="py-28 lg:py-36 bg-[#FAF7F2]">
@@ -146,7 +147,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 24 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-4"
+          className="text-center mb-20"
         >
           <p
             className="text-[#C8A96E] text-xs tracking-[0.3em] uppercase font-dm mb-4"
@@ -164,77 +165,23 @@ export default function Testimonials() {
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
               Hasil Kerja
-            </em>
-            {' '}Kami Langsung
+            </em>{' '}
+            Kami Langsung
           </h2>
+          <p
+            className="text-[#5a5a5a] text-lg font-dm max-w-2xl mx-auto"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            Bukan sekadar janji — ini dokumentasi nyata dari pernikahan yang kami tangani.
+          </p>
         </motion.div>
 
-        {/* Subtext */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={headerInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-center text-[#5a5a5a] text-lg font-dm max-w-3xl mx-auto mb-20"
-          style={{ fontFamily: 'DM Sans, sans-serif' }}
-        >
-          Bukan sekadar janji — ini dokumentasi nyata dari pernikahan yang kami tangani.
-        </motion.p>
-
-        {/* Content - Desktop: 2 column grid, Mobile: Single column with tabs */}
-        <motion.div
-          ref={contentRef}
-          initial={{ opacity: 0, y: 24 }}
-          animate={contentInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          {/* Mobile pill tabs */}
-          <div className="md:hidden mb-6 flex gap-2 overflow-x-auto pb-2">
-            {videos.map((video, idx) => (
-              <PillTab
-                key={video.id}
-                video={video}
-                isActive={idx === activeIndex}
-                onClick={() => handleSwitch(idx)}
-              />
-            ))}
-          </div>
-
-          {/* Main layout grid */}
-          <div className="grid md:grid-cols-[1fr_2fr] gap-6 items-start">
-            {/* Left column - Thumbnails (desktop only) */}
-            <div className="hidden md:flex flex-col gap-4">
-              {videos.map((video, idx) => (
-                <ThumbnailCard
-                  key={video.id}
-                  video={video}
-                  isActive={idx === activeIndex}
-                  onClick={() => handleSwitch(idx)}
-                />
-              ))}
-            </div>
-
-            {/* Right column - Main player & info */}
-            <div>
-              <MainPlayer video={activeVideo} playing={playing} onPlay={() => setPlaying(true)} />
-
-              {/* Title & Description */}
-              <div className="mt-6">
-                <h3
-                  className="font-cormorant text-xl lg:text-2xl font-semibold text-[#1B3A2E] italic mb-2"
-                  style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
-                >
-                  {activeVideo.title}
-                </h3>
-                <p
-                  className="text-sm text-[#888] font-dm leading-relaxed"
-                  style={{ fontFamily: 'DM Sans, sans-serif' }}
-                >
-                  {activeVideo.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        {/* Video rows */}
+        <div>
+          {videoRows.map((row, index) => (
+            <VideoRow key={row.id} row={row} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   )
