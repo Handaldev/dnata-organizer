@@ -25,7 +25,7 @@ const packageTabs = [
         name: 'Basic Wedding Planner',
         category: 'Planner',
         description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya.',
-        image: '/images/package-basic.webp',
+        image: '/images/proses_1.webp',
       },
       {
         id: 'grand',
