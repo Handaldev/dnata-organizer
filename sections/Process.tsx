@@ -51,21 +51,28 @@ function VideoPlayer() {
       <div className="rounded-[2rem] overflow-hidden aspect-[9/16] lg:aspect-[3/4] relative shadow-2xl bg-black w-full max-w-sm">
         {!isPlaying ? (
           <div
-            className="absolute inset-0 bg-black/80 flex items-center justify-center cursor-pointer group"
+            className="relative w-full h-full cursor-pointer group"
             onClick={() => setIsPlaying(true)}
           >
-            <button
-              className="w-16 h-16 rounded-full bg-[#C8A96E] flex items-center justify-center hover:bg-[#C8A96E]/90 transition-colors group-hover:scale-110 duration-300"
-              aria-label="Play video"
-            >
-              <Play size={32} className="text-white fill-white ml-1" />
-            </button>
+            <img
+              src={`https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`}
+              alt="Video thumbnail"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/50 transition-colors">
+              <button
+                className="w-16 h-16 rounded-full bg-[#C8A96E] flex items-center justify-center hover:bg-[#C8A96E]/90 transition-colors group-hover:scale-110 duration-300"
+                aria-label="Play video"
+              >
+                <Play size={32} className="text-white fill-white ml-1" />
+              </button>
+            </div>
           </div>
         ) : (
           <iframe
             width="100%"
             height="100%"
-            src={videoConfig.url + '?autoplay=1'}
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
             title="Dinata Organizer Process Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
