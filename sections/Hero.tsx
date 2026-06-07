@@ -11,6 +11,23 @@ import { ImageCarousel } from '@/components/ImageCarousel'
 const heroImages = [
   '/images/hero_kanan.webp',
   '/images/HERO_1.webp', // tambah/ubah gambar di sini
+  '/images/HERO_3.webp', // tambah/ubah gambar di sini
+  '/images/HERO_4.webp', // tambah/ubah gambar di sini
+  '/images/HERO_5.webp', // tambah/ubah gambar di sini
+  '/images/HERO_6.webp', // tambah/ubah gambar di sini
+  '/images/HERO_7.webp', // tambah/ubah gambar di sini
+  '/images/HERO_8.webp', // tambah/ubah gambar di sini
+  '/images/HERO_9.webp', // tambah/ubah gambar di sini
+  '/images/HERO_10.webp', // tambah/ubah gambar di sini
+  '/images/HERO_11.webp', // tambah/ubah gambar di sini
+  '/images/HERO_12.webp', // tambah/ubah gambar di sini
+  '/images/HERO_13.webp', // tambah/ubah gambar di sini
+  '/images/HERO_14.webp', // tambah/ubah gambar di sini
+  '/images/HERO_15.webp', // tambah/ubah gambar di sini
+  '/images/HERO_16.webp', // tambah/ubah gambar di sini
+  '/images/HERO_17.webp', // tambah/ubah gambar di sini
+  '/images/HERO_18.webp', // tambah/ubah gambar di sini
+  '/images/HERO_19.webp', // tambah/ubah gambar di sini
 ]
 
 export default function Hero() {
