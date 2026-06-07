@@ -15,7 +15,6 @@ import {
 // Intro Solution images - mudah diubah di sini
 const introImages = [
   '/images/BTS_1.webp',
-  '/images/BTS_1.webp', // tambah/ubah gambar di sini
   '/images/BTS_2.webp', // tambah/ubah gambar di sini
   '/images/BTS_3.webp', // tambah/ubah gambar di sini
   '/images/BTS_4.webp', // tambah/ubah gambar di sini
