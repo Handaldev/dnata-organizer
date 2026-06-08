@@ -5,7 +5,10 @@ const APPS_SCRIPT_URL = process.env.NEXT_PUBLIC_APPS_SCRIPT_URL || ''
 export interface LeadData {
   nama: string
   noHp: string
-  tanggalAcara?: string
+  jenisService: string
+  tanggalAcara: string
+  lokasiAcara: string
+  jumlahPax: string
   kota: string
   idKonsultasi: string
   status: 'Prospek' | 'Hot Lead'
