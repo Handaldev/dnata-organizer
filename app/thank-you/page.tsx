@@ -52,7 +52,7 @@ function ThankYouContent() {
     if (userData?.idKonsultasi) {
       await updateLeadStatus(userData.idKonsultasi, 'Hot Lead')
     }
-    const link = getThankYouWhatsAppLink(userData?.nama || '', userData?.idKonsultasi || '')
+    const link = getThankYouWhatsAppLink(userData?.nama || '', userData?.idKonsultasi || '', serviceParam || undefined)
     window.open(link, '_blank', 'noopener,noreferrer')
   }
 
