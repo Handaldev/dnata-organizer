@@ -27,13 +27,14 @@ export function getHeroWhatsAppLink(): string {
 }
 
 // Pesan dari Thank You page — setelah isi form, ada ID konsultasi
-export function getThankYouWhatsAppLink(nama: string, idKonsultasi: string): string {
+export function getThankYouWhatsAppLink(nama: string, idKonsultasi: string, jenisService?: string): string {
   const message = encodeURIComponent(
     'Halo Dinata Organizer,\n' +
     `Saya ${nama} baru saja mengisi form konsultasi di website.\n` +
     `ID Konsultasi saya: ${idKonsultasi}\n` +
+    (jenisService ? `Kategori Service: ${jenisService}\n` : '') +
     '\n' +
-    'Saya ingin melanjutkan diskusi mengenai paket pernikahan.\n' +
+    'Saya ingin melanjutkan diskusi lebih lanjut.\n' +
     'Sumber: Website - Setelah Isi Form'
   )
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
