@@ -9,8 +9,8 @@ import { ImageCarousel } from '@/components/ImageCarousel'
 
 // Hero images - mudah diubah di sini
 const heroImages = [
-  '/images/hero_kanan.webp',
-  '/images/HERO_1.webp', // tambah/ubah gambar di sini
+  '/images/HERO_1.webp',
+  '/images/HERO_2.webp', // tambah/ubah gambar di sini
   '/images/HERO_3.webp', // tambah/ubah gambar di sini
   '/images/HERO_4.webp', // tambah/ubah gambar di sini
   '/images/HERO_5.webp', // tambah/ubah gambar di sini
