@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { CheckCircle2, Home, MessageCircle } from 'lucide-react'
-import { getUserData, getWhatsAppLink } from '@/lib/utils'
+import { getUserData, getThankYouWhatsAppLink } from '@/lib/utils'
 import { trackWhatsAppClick } from '@/lib/analytics'
 import { updateLeadStatus } from '@/lib/googleSheets'
 import { pricingFileMap } from '@/components/LeadForm'
@@ -52,7 +52,7 @@ function ThankYouContent() {
     if (userData?.idKonsultasi) {
       await updateLeadStatus(userData.idKonsultasi, 'Hot Lead')
     }
-    const link = getWhatsAppLink(userData?.nama, userData?.idKonsultasi)
+    const link = getThankYouWhatsAppLink(userData?.nama || '', userData?.idKonsultasi || '', serviceParam || undefined)
     window.open(link, '_blank', 'noopener,noreferrer')
   }
 

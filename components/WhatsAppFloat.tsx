@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X } from 'lucide-react'
-import { getWhatsAppLink, getUserData } from '@/lib/utils'
+import { getHeroWhatsAppLink, getUserData } from '@/lib/utils'
 import { trackWhatsAppClick } from '@/lib/analytics'
 import { updateLeadStatus as updateSheet } from '@/lib/googleSheets'
 
@@ -28,7 +28,7 @@ export default function WhatsAppFloat() {
       await updateSheet(userData.idKonsultasi, 'Hot Lead')
     }
 
-    const link = getWhatsAppLink(userData?.nama, userData?.idKonsultasi)
+    const link = getHeroWhatsAppLink()
     window.open(link, '_blank', 'noopener,noreferrer')
   }
 

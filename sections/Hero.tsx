@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
-import { getWhatsAppLink } from '@/lib/utils'
+import { getHeroWhatsAppLink } from '@/lib/utils'
 import { trackWhatsAppClick } from '@/lib/analytics'
 import { ImageCarousel } from '@/components/ImageCarousel'
 
@@ -33,7 +33,7 @@ const heroImages = [
 export default function Hero() {
   const handleWAClick = () => {
     trackWhatsAppClick('hero_section')
-    window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+    window.open(getHeroWhatsAppLink(), '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -238,4 +238,3 @@ export default function Hero() {
     </section>
   )
 }
-
