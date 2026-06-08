@@ -391,7 +391,7 @@ export default function Packages() {
               className={`grid gap-6 mb-8 ${currentCards.length === 3
                 ? 'grid-cols-1 lg:grid-cols-3'
                 : currentCards.length === 4
-                ? 'grid-cols-2 lg:grid-cols-4'
+                ? 'grid-cols-1 lg:grid-cols-4'
                 : 'grid-cols-1 lg:grid-cols-2'
                 }`}
             >
