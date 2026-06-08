@@ -12,23 +12,39 @@ export function generateConsultationId(): string {
   return `${prefix}-${timestamp}-${random}`
 }
 
-export function formatWhatsAppMessage(nama: string, idKonsultasi: string): string {
-  return encodeURIComponent(
-    `Halo Dinata Organizer! 👋\n\nSaya ${nama} dengan ID Konsultasi: *${idKonsultasi}*\n\nSaya ingin mengetahui lebih lanjut mengenai layanan Wedding Planner dari Dinata Organizer.\n\nTerima kasih! 🌸`
-  )
-}
-
 export const WHATSAPP_NUMBER = '6282124503329'
 
+// Pesan dari Hero / Floating WA button — belum isi form
+export function getHeroWhatsAppLink(): string {
+  const message = encodeURIComponent(
+    'Halo Dinata Organizer,\n' +
+    'Saya tertarik untuk mengetahui lebih lanjut mengenai layanan wedding organizer dari Dinata.\n' +
+    'Boleh minta informasinya?\n' +
+    '\n' +
+    'Sumber: Website - Tombol Konsultasi'
+  )
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+}
+
+// Pesan dari Thank You page — setelah isi form, ada ID konsultasi
+export function getThankYouWhatsAppLink(nama: string, idKonsultasi: string): string {
+  const message = encodeURIComponent(
+    'Halo Dinata Organizer,\n' +
+    `Saya ${nama} baru saja mengisi form konsultasi di website.\n` +
+    `ID Konsultasi saya: ${idKonsultasi}\n` +
+    '\n' +
+    'Saya ingin melanjutkan diskusi mengenai paket pernikahan.\n' +
+    'Sumber: Website - Setelah Isi Form'
+  )
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+}
+
+// Legacy — dipakai kalau ada tempat lain yg masih pakai getWhatsAppLink
 export function getWhatsAppLink(nama?: string, idKonsultasi?: string): string {
   if (nama && idKonsultasi) {
-    const message = formatWhatsAppMessage(nama, idKonsultasi)
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+    return getThankYouWhatsAppLink(nama, idKonsultasi)
   }
-  const defaultMessage = encodeURIComponent(
-    'Halo Dinata Organizer! 👋\n\nSaya ingin mengetahui lebih lanjut mengenai layanan Wedding Planner.\n\nTerima kasih! 🌸'
-  )
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${defaultMessage}`
+  return getHeroWhatsAppLink()
 }
 
 export function getUserData(): { nama?: string; idKonsultasi?: string } | null {
