@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
@@ -18,7 +18,7 @@ const pricingFileNames: Record<string, string> = {
   'All In Pre Event':'Dinata-Pricing-All-In-Pre-Event.pdf',
 }
 
-export default function ThankYouPage() {
+function ThankYouContent() {
   const searchParams = useSearchParams()
   const serviceParam = searchParams.get('service') || ''
   const isCustom = !serviceParam
@@ -151,5 +151,23 @@ export default function ThankYouPage() {
         © {new Date().getFullYear()} CV Dinata Kreatif Group — Dipercaya lebih dari 200 pasangan
       </p>
     </div>
+  )
+}
+
+import { Suspense } from 'react'
+
+export default function ThankYouPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#FAF8F4]" />}>
+      <ThankYouContent />
+    </Suspense>
+  )
+}
+
+export default function ThankYouPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#FAF8F4]" />}>
+      <ThankYouContent />
+    </Suspense>
   )
 }
