@@ -13,9 +13,9 @@ import { pricingFileMap } from '@/components/LeadForm'
 
 const pricingFileNames: Record<string, string> = {
   'Wedding Planner': 'Dinata-Pricing-Wedding-Planner.pdf',
-  'WO on the Day':   'Dinata-Pricing-WO-on-the-Day.pdf',
-  'All In Wedding':  'Dinata-Pricing-All-In-Wedding.pdf',
-  'All In Pre Event':'Dinata-Pricing-All-In-Pre-Event.pdf',
+  'WO on the Day': 'Dinata-Pricing-WO-on-the-Day.pdf',
+  'All In Wedding': 'Dinata-Pricing-All-In-Wedding.pdf',
+  'All In Pre Event': 'Dinata-Pricing-All-In-Pre-Event.pdf',
 }
 
 function ThankYouContent() {
@@ -154,15 +154,6 @@ function ThankYouContent() {
   )
 }
 
-import { Suspense } from 'react'
-
-export default function ThankYouPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-[#FAF8F4]" />}>
-      <ThankYouContent />
-    </Suspense>
-  )
-}
 
 export default function ThankYouPage() {
   return (
