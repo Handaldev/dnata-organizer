@@ -24,7 +24,7 @@ const packageTabs = [
         id: 'basic',
         name: 'Basic Wedding Planner',
         category: 'Planner',
-        description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya.',
+        description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya dengan maksimal 800 pax.',
         image: '/images/proses_1.webp',
       },
       {
