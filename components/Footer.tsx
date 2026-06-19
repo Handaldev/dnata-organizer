@@ -76,7 +76,7 @@ export default function Footer() {
               className="text-[#FAF8F4]/50 text-sm font-dm leading-relaxed mb-6 max-w-xs"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Wedding Organizer Jabodetabek dengan pendekatan personal. 200+ pernikahan sukses, on budget, tanpa drama.
+              Wedding Organizer Jabodetabek dengan pendekatan personal. 300+ pernikahan sukses, on budget, tanpa drama.
             </p>
             {/* Socials */}
             <div className="flex gap-3">
