@@ -89,7 +89,7 @@ const packageTabs = [
         id: 'allin-basic',
         name: 'Basic Wedding',
         category: 'All In',
-        description: 'Paket lengkap pernikahan dengan vendor pilihan yang terjangkau namun berkualitas.',
+        description: 'Paket lengkap pernikahan dengan vendor pilihan yang terjangkau namun berkualitas cocok untuk intimate dengan maksimal 300 pax.',
         image: '/images/package-allin-basic.webp',
       },
       {
