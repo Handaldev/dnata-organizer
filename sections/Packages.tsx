@@ -24,7 +24,7 @@ const packageTabs = [
         id: 'basic',
         name: 'Basic Wedding Planner',
         category: 'Planner',
-        description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya dengan maksimal 800 pax.',
+        description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya untuk maksimal 800 pax.',
         image: '/images/proses_1.webp',
       },
       {
@@ -38,7 +38,7 @@ const packageTabs = [
         id: 'praeevent',
         name: 'Pra Event Planner',
         category: 'Planner',
-        description: 'Siraman, pengajian, engagement — direncanakan dengan detail yang sama seriusnya.',
+        description: 'Siraman, pengajian, engagement & event lainnya — direncanakan dengan detail yang sama seriusnya dengan maksimal 100 pax.',
         image: '/images/proses_3.webp',
       },
     ],
