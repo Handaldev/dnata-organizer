@@ -178,19 +178,7 @@ export default function Footer() {
             className="text-[#FAF8F4]/30 text-xs font-dm"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            © {new Date().getFullYear()} CV Dinata Kreatif Group. All rights reserved.
-          </p>
-          <p
-            className="text-[#FAF8F4]/30 text-xs font-dm"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
-          >
-            Wedding & Event Organizer Profesional
-          </p>
-          <p
-            className="text-[#FAF8F4]/30 text-xs font-dm"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
-          >
-            Design by{' '}
+            © {new Date().getFullYear()} CV Dinata Kreatif Group. All rights reserved. Design by{' '}
             <a
               href={siteConfig.designCredit.url}
               target="_blank"
@@ -199,6 +187,12 @@ export default function Footer() {
             >
               {siteConfig.designCredit.name}
             </a>
+          </p>
+          <p
+            className="text-[#FAF8F4]/30 text-xs font-dm"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            Wedding & Event Organizer Profesional
           </p>
         </div>
       </div>
