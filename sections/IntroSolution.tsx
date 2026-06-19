@@ -9,9 +9,10 @@ import { ChevronDown, Shuffle, UserCheck, Wallet, NotebookPen, Network } from 'l
 // Intro Solution images - mudah diubah di sini
 const introImages = [
   '/images/BTS_1.webp',
-  '/images/BTS_2.webp',
   '/images/BTS_3.webp',
   '/images/BTS_4.webp',
+  '/images/BTS_5.webp',
+  '/images/BTS_6.webp',
 ]
 
 const pillars = [
@@ -181,8 +182,8 @@ export default function IntroSolution() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
                     className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen
-                        ? 'bg-[#C8A96E]/10 border-[#C8A96E]/40'
-                        : 'bg-white/60 border-[#1B3A2E]/10'
+                      ? 'bg-[#C8A96E]/10 border-[#C8A96E]/40'
+                      : 'bg-white/60 border-[#1B3A2E]/10'
                       }`}
                   >
                     <button

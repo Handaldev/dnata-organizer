@@ -195,7 +195,7 @@ export default function Gallery() {
               className="font-cormorant text-4xl lg:text-5xl font-semibold text-[#1B3A2E] leading-tight"
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
             >
-              200+ Pernikahan{' '}
+              300+ Pernikahan{' '}
               <em className="font-cormorant italic text-[#C8A96E]" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>yang Kami Wujudkan</em>
             </h2>
             <p

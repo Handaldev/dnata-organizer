@@ -17,28 +17,28 @@ const packageTabs = [
         id: 'intimate',
         name: 'Intimate Wedding Planner',
         category: 'Planner',
-        description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat.',
+        description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat untuk maksimal 300 pax',
         image: '/images/hero_kanan.webp',
       },
       {
         id: 'basic',
         name: 'Basic Wedding Planner',
         category: 'Planner',
-        description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya.',
+        description: 'Perencanaan lengkap A–Z untuk hari spesialmu dengan koordinasi vendor terpercaya untuk maksimal 800 pax.',
         image: '/images/proses_1.webp',
       },
       {
         id: 'grand',
         name: 'Grand Wedding Planner',
         category: 'Planner',
-        description: 'Untuk pernikahan besar dengan tamu ramai — semua terorganisir rapi dan megah.',
+        description: 'Untuk pernikahan besar dengan tamu ramai — semua terorganisir rapi dan megah untuk maksimal 1500 pax.',
         image: '/images/proses_2.webp',
       },
       {
         id: 'praeevent',
         name: 'Pra Event Planner',
         category: 'Planner',
-        description: 'Siraman, pengajian, engagement — direncanakan dengan detail yang sama seriusnya.',
+        description: 'Siraman, pengajian, engagement & event lainnya — direncanakan dengan detail yang sama seriusnya untuk maksimal 100 pax.',
         image: '/images/proses_3.webp',
       },
     ],
@@ -53,28 +53,28 @@ const packageTabs = [
         id: 'wo-intimate',
         name: 'Intimate WO on the Day',
         category: 'WO on the Day',
-        description: 'Koordinasi penuh hari H untuk pernikahan skala intim, tim standby dari pagi.',
+        description: 'Koordinasi penuh hari H untuk pernikahan skala intim, tim standby dari pagi untuk maksimal 300 pax.',
         image: '/images/solution.webp',
       },
       {
         id: 'wo-basic',
         name: 'Basic WO on the Day',
         category: 'WO on the Day',
-        description: 'Pengawasan & koordinasi semua vendor di hari H tanpa kamu perlu khawatir.',
+        description: 'Pengawasan & koordinasi semua vendor di hari H tanpa kamu perlu khawatir untuk maksimal 800 pax.',
         image: '/images/testi_1.webp',
       },
       {
         id: 'wo-grand',
         name: 'Grand WO on the Day',
         category: 'WO on the Day',
-        description: 'Tim lengkap untuk grand wedding — koordinasi skala besar berjalan mulus.',
+        description: 'Tim lengkap untuk grand wedding — koordinasi skala besar berjalan mulus untuk maksimal 1500 pax.',
         image: '/images/testi_2.webp',
       },
       {
         id: 'wo-praevent',
         name: 'Pra Event WO on the Day',
         category: 'WO on the Day',
-        description: 'Koordinasi penuh untuk siraman, pengajian, dan pra-event lainnya.',
+        description: 'Koordinasi penuh untuk siraman, pengajian, dan pra-event lainnya untuk maksimal 100 pax.',
         image: '/images/package-wo-praevent.webp',
       },
     ],
@@ -89,7 +89,7 @@ const packageTabs = [
         id: 'allin-basic',
         name: 'Basic Wedding',
         category: 'All In',
-        description: 'Paket lengkap pernikahan dengan vendor pilihan yang terjangkau namun berkualitas.',
+        description: 'Paket lengkap pernikahan dengan vendor pilihan yang terjangkau namun berkualitas cocok untuk intimate wedding dengan maksimal 300 pax.',
         image: '/images/package-allin-basic.webp',
       },
       {
@@ -391,8 +391,8 @@ export default function Packages() {
               className={`grid gap-6 mb-8 ${currentCards.length === 3
                 ? 'grid-cols-1 lg:grid-cols-3'
                 : currentCards.length === 4
-                ? 'grid-cols-1 lg:grid-cols-4'
-                : 'grid-cols-1 lg:grid-cols-2'
+                  ? 'grid-cols-1 lg:grid-cols-4'
+                  : 'grid-cols-1 lg:grid-cols-2'
                 }`}
             >
               {currentCards.map((card, i) => (

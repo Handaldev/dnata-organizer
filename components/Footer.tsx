@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { siteConfig } from '@/lib/siteConfig'
 
 const socials = [
   {
@@ -177,7 +178,15 @@ export default function Footer() {
             className="text-[#FAF8F4]/30 text-xs font-dm"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            © {new Date().getFullYear()} CV Dinata Kreatif Group. All rights reserved.
+            © {new Date().getFullYear()} CV Dinata Kreatif Group. All rights reserved. Design by{' '}
+            <a
+              href={siteConfig.designCredit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C8A96E]/60 hover:text-[#C8A96E] transition-colors duration-200"
+            >
+              {siteConfig.designCredit.name}
+            </a>
           </p>
           <p
             className="text-[#FAF8F4]/30 text-xs font-dm"
