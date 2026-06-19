@@ -38,7 +38,7 @@ const packageTabs = [
         id: 'praeevent',
         name: 'Pra Event Planner',
         category: 'Planner',
-        description: 'Siraman, pengajian, engagement & event lainnya — direncanakan dengan detail yang sama seriusnya dengan maksimal 100 pax.',
+        description: 'Siraman, pengajian, engagement & event lainnya — direncanakan dengan detail yang sama seriusnya untuk maksimal 100 pax.',
         image: '/images/proses_3.webp',
       },
     ],
