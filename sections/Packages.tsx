@@ -17,7 +17,7 @@ const packageTabs = [
         id: 'intimate',
         name: 'Intimate Wedding Planner',
         category: 'Planner',
-        description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat.',
+        description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat dengan maksimal 300 pax',
         image: '/images/hero_kanan.webp',
       },
       {
@@ -391,8 +391,8 @@ export default function Packages() {
               className={`grid gap-6 mb-8 ${currentCards.length === 3
                 ? 'grid-cols-1 lg:grid-cols-3'
                 : currentCards.length === 4
-                ? 'grid-cols-1 lg:grid-cols-4'
-                : 'grid-cols-1 lg:grid-cols-2'
+                  ? 'grid-cols-1 lg:grid-cols-4'
+                  : 'grid-cols-1 lg:grid-cols-2'
                 }`}
             >
               {currentCards.map((card, i) => (
