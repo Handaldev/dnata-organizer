@@ -1,27 +1,31 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { Wallet, Users, AlertTriangle, UserX } from 'lucide-react'
+import { useRef, useState } from 'react'
+import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { Wallet, Users, AlertTriangle, UserX, ChevronDown } from 'lucide-react'
 
 const problems = [
   {
     icon: <Wallet className="w-7 h-7" />,
+    iconSm: <Wallet className="w-5 h-5" />,
     title: 'Budget Jebol Tanpa Sadar',
     desc: 'Sudah kalkulasi matang, tapi ternyata banyak biaya yang tidak kelihatan di awal. Tiba-tiba angkanya jauh dari rencana.',
   },
   {
     icon: <Users className="w-7 h-7" />,
+    iconSm: <Users className="w-5 h-5" />,
     title: 'Pusing Koordinasi Vendor',
     desc: 'Deal dengan venue, katering, dekorasi, fotografer — semua minta keputusan cepat, semua minta difollow up. Kapan waktunya nikmatin masa tunangan?',
   },
   {
     icon: <AlertTriangle className="w-7 h-7" />,
+    iconSm: <AlertTriangle className="w-5 h-5" />,
     title: 'Takut Hari H Berantakan',
     desc: 'Sudah bayar mahal, tapi tetap tidak bisa tidur tenang. Gimana kalau vendor tiba-tiba bermasalah? Gimana kalau timeline meleset?',
   },
   {
     icon: <UserX className="w-7 h-7" />,
+    iconSm: <UserX className="w-5 h-5" />,
     title: 'Vendor Rekomendasi Mengecewakan',
     desc: 'Referensi dari circle terdekat tidak selalu cocok — dan kamu baru tahu kekecewaannya pas sudah terlanjur deal.',
   },
@@ -30,6 +34,7 @@ const problems = [
 export default function Problem() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
     <section
@@ -67,8 +72,8 @@ export default function Problem() {
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* Desktop: Cards (lg+) */}
+        <div className="hidden lg:grid lg:grid-cols-4 gap-6 lg:gap-8">
           {problems.map((item, i) => (
             <motion.div
               key={item.title}
@@ -94,6 +99,71 @@ export default function Problem() {
               </p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile: Accordion (< lg) */}
+        <div className="lg:hidden space-y-3">
+          {problems.map((item, i) => {
+            const isOpen = openIndex === i
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+                className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${
+                  isOpen
+                    ? 'bg-white/10 border-[#C8A96E]/40'
+                    : 'bg-white/5 border-white/10'
+                }`}
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  className="w-full flex items-center gap-4 px-5 py-4 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <div className={`w-9 h-9 flex-shrink-0 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                    isOpen ? 'bg-[#C8A96E] text-white' : 'bg-[#C8A96E]/10 text-[#C8A96E]'
+                  }`}>
+                    {item.iconSm}
+                  </div>
+                  <span
+                    className={`flex-1 font-cormorant text-lg font-semibold transition-colors duration-300 ${
+                      isOpen ? 'text-[#C8A96E]' : 'text-[#FAF8F4]'
+                    }`}
+                    style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+                  >
+                    {item.title}
+                  </span>
+                  <ChevronDown
+                    className={`w-4 h-4 text-[#C8A96E] flex-shrink-0 transition-transform duration-300 ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <p
+                        className="px-5 pb-5 text-[#FAF8F4]/60 text-sm font-dm leading-relaxed border-t border-white/10 pt-3"
+                        style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      >
+                        {item.desc}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )
+          })}
         </div>
 
         {/* Transition line */}
