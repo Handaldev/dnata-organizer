@@ -1,23 +1,17 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { ImageCarousel } from '@/components/ImageCarousel'
-import {
-  Shuffle,        // Full Handle A–Z
-  UserCheck,      // 1 Personal Planner Dedicated
-  Wallet,         // Budget 100% Transparan
-  NotebookPen,    // Ingat Setiap Detail Kamu
-  Network         // Vendor Network Eksklusif
-} from 'lucide-react'
+import { ChevronDown, Shuffle, UserCheck, Wallet, NotebookPen, Network } from 'lucide-react'
 
 // Intro Solution images - mudah diubah di sini
 const introImages = [
   '/images/BTS_1.webp',
-  '/images/BTS_2.webp', // tambah/ubah gambar di sini
-  '/images/BTS_3.webp', // tambah/ubah gambar di sini
-  '/images/BTS_4.webp', // tambah/ubah gambar di sini
+  '/images/BTS_2.webp',
+  '/images/BTS_3.webp',
+  '/images/BTS_4.webp',
 ]
 
 const pillars = [
@@ -39,7 +33,7 @@ const pillars = [
   {
     icon: <Network className="w-5 h-5 text-[#C8A96E]" />,
     title: 'Vendor Network Eksklusif',
-    desc: '7 tahun di industri ini, kami punya akses ke vendor-vendor terbaik yang tidak semua orang tahu — dengan harga yang sudah kami negosiasikan khusus untuk klien kami.Bukan berganti-ganti PIC. Satu orang yang benar-benar paham kebutuhan kamu dan bisa dihubungi kapan saja.',
+    desc: '7 tahun di industri ini, kami punya akses ke vendor-vendor terbaik yang tidak semua orang tahu — dengan harga yang sudah kami negosiasikan khusus untuk klien kami.',
   },
   {
     icon: <Wallet className="w-5 h-5 text-[#C8A96E]" />,
@@ -51,6 +45,7 @@ const pillars = [
 export default function IntroSolution() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
     <section
@@ -143,40 +138,104 @@ export default function IntroSolution() {
           </motion.div>
 
           {/* Pillars */}
-          <div className="space-y-8">
-            {pillars.map((p, i) => (
-              <motion.div
-                key={p.title}
-                initial={{ opacity: 0, x: 32 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.3 + i * 0.13 }}
-                className="flex gap-5 items-start group"
-              >
-                <div className="w-10 h-10 flex-shrink-0 rounded-xl bg-[#C8A96E]/15 flex items-center justify-center text-[#C8A96E] font-cormorant text-xl group-hover:bg-[#C8A96E] group-hover:text-white transition-all duration-300">
-                  {p.icon}
-                </div>
-                <div>
-                  <h3
-                    className="font-cormorant text-xl font-semibold text-[#1B3A2E] mb-1"
-                    style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+          <div>
+            {/* Desktop: list biasa (lg+) */}
+            <div className="hidden lg:block space-y-8">
+              {pillars.map((p, i) => (
+                <motion.div
+                  key={p.title}
+                  initial={{ opacity: 0, x: 32 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.3 + i * 0.13 }}
+                  className="flex gap-5 items-start group"
+                >
+                  <div className="w-10 h-10 flex-shrink-0 rounded-xl bg-[#C8A96E]/15 flex items-center justify-center text-[#C8A96E] font-cormorant text-xl group-hover:bg-[#C8A96E] group-hover:text-white transition-all duration-300">
+                    {p.icon}
+                  </div>
+                  <div>
+                    <h3
+                      className="font-cormorant text-xl font-semibold text-[#1B3A2E] mb-1"
+                      style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p
+                      className="text-[#1B3A2E]/70 text-sm font-dm leading-relaxed"
+                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    >
+                      {p.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Mobile: Accordion (< lg) */}
+            <div className="lg:hidden space-y-3">
+              {pillars.map((p, i) => {
+                const isOpen = openIndex === i
+                return (
+                  <motion.div
+                    key={p.title}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+                    className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen
+                        ? 'bg-[#C8A96E]/10 border-[#C8A96E]/40'
+                        : 'bg-white/60 border-[#1B3A2E]/10'
+                      }`}
                   >
-                    {p.title}
-                  </h3>
-                  <p
-                    className="text-[#1B3A2E]/70 text-sm font-dm leading-relaxed"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                    <button
+                      onClick={() => setOpenIndex(isOpen ? null : i)}
+                      className="w-full flex items-center gap-4 px-5 py-4 text-left"
+                      aria-expanded={isOpen}
+                    >
+                      <div className={`w-9 h-9 flex-shrink-0 rounded-xl flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[#C8A96E] [&_svg]:text-white' : 'bg-[#C8A96E]/15'
+                        }`}>
+                        {p.icon}
+                      </div>
+                      <span
+                        className={`flex-1 font-cormorant text-lg font-semibold transition-colors duration-300 ${isOpen ? 'text-[#1B3A2E]' : 'text-[#1B3A2E]'
+                          }`}
+                        style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}
+                      >
+                        {p.title}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 text-[#C8A96E] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+                          }`}
+                      />
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <p
+                            className="px-5 pb-5 text-[#1B3A2E]/70 text-sm font-dm leading-relaxed border-t border-[#1B3A2E]/10 pt-3"
+                            style={{ fontFamily: 'DM Sans, sans-serif' }}
+                          >
+                            {p.desc}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )
+              })}
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.65 }}
-              className="pt-4"
+              className="pt-6"
             >
               <a
                 href="#proses"
