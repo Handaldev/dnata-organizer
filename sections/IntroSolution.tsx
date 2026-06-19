@@ -11,6 +11,8 @@ const introImages = [
   '/images/BTS_1.webp',
   '/images/BTS_3.webp',
   '/images/BTS_4.webp',
+  '/images/BTS_5.webp',
+  '/images/BTS_6.webp',
 ]
 
 const pillars = [
