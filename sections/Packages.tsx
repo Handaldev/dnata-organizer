@@ -17,7 +17,7 @@ const packageTabs = [
         id: 'intimate',
         name: 'Intimate Wedding Planner',
         category: 'Planner',
-        description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat dengan maksimal 300 pax',
+        description: 'Perencanaan penuh untuk pernikahan intim dengan sentuhan personal yang hangat untuk maksimal 300 pax',
         image: '/images/hero_kanan.webp',
       },
       {
@@ -31,7 +31,7 @@ const packageTabs = [
         id: 'grand',
         name: 'Grand Wedding Planner',
         category: 'Planner',
-        description: 'Untuk pernikahan besar dengan tamu ramai — semua terorganisir rapi dan megah.',
+        description: 'Untuk pernikahan besar dengan tamu ramai — semua terorganisir rapi dan megah untuk maksimal 1500 pax.',
         image: '/images/proses_2.webp',
       },
       {
