@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { siteConfig } from '@/lib/siteConfig'
 
 const socials = [
   {
@@ -75,7 +76,7 @@ export default function Footer() {
               className="text-[#FAF8F4]/50 text-sm font-dm leading-relaxed mb-6 max-w-xs"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Wedding Organizer Jabodetabek dengan pendekatan personal. 300+ pernikahan sukses, on budget, tanpa drama.
+              Wedding Organizer Jabodetabek dengan pendekatan personal. 200+ pernikahan sukses, on budget, tanpa drama.
             </p>
             {/* Socials */}
             <div className="flex gap-3">
@@ -184,6 +185,20 @@ export default function Footer() {
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             Wedding & Event Organizer Profesional
+          </p>
+          <p
+            className="text-[#FAF8F4]/30 text-xs font-dm"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            Design by{' '}
+            <a
+              href={siteConfig.designCredit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C8A96E]/60 hover:text-[#C8A96E] transition-colors duration-200"
+            >
+              {siteConfig.designCredit.name}
+            </a>
           </p>
         </div>
       </div>
