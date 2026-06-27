@@ -29,7 +29,7 @@ const videoRows = [
     title: 'Kompilasi Testimoni Klien',
     description:
       'Langsung dari mulut klien kami — cerita nyata mereka tentang pengalaman bekerja sama dengan Dinata Organizer.',
-    videoId: 'SuAbV6G8BXg',
+    videoId: 'EI3F8ezck_c',
     source: 'YouTube',
   },
 ]
