@@ -20,7 +20,7 @@ const videoRows = [
     title: 'Kompilasi Wedding Expo',
     description:
       'Behind the scenes & momen seru dari berbagai wedding expo yang kami ikuti — lihat energi tim kami langsung.',
-    videoId: 'P22ag__avHE',
+    videoId: 'SBHD3gFg6ho',
     source: 'YouTube',
   },
   {
