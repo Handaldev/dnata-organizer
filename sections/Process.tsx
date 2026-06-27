@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import { Play } from 'lucide-react'
 
 const videoConfig = {
-  videoId: 'Y31bZD0H8wA',
+  videoId: 'pc9TIOKLbag',
 }
 
 const steps = [
