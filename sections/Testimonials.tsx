@@ -11,7 +11,7 @@ const videoRows = [
     title: 'Video Best Wedding',
     description:
       'Highlight pernikahan terbaik yang pernah kami tangani — setiap momen diabadikan dengan sinematografi penuh perasaan.',
-    videoId: 'V4Tw79VQiJc',
+    videoId: 'VoP2pNvK1PU',
     source: 'YouTube',
   },
   {
@@ -20,7 +20,7 @@ const videoRows = [
     title: 'Kompilasi Wedding Expo',
     description:
       'Behind the scenes & momen seru dari berbagai wedding expo yang kami ikuti — lihat energi tim kami langsung.',
-    videoId: 'P22ag__avHE',
+    videoId: 'SBHD3gFg6ho',
     source: 'YouTube',
   },
   {
@@ -29,7 +29,7 @@ const videoRows = [
     title: 'Kompilasi Testimoni Klien',
     description:
       'Langsung dari mulut klien kami — cerita nyata mereka tentang pengalaman bekerja sama dengan Dinata Organizer.',
-    videoId: 'SuAbV6G8BXg',
+    videoId: 'EI3F8ezck_c',
     source: 'YouTube',
   },
 ]

@@ -7,51 +7,55 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const galleryImages = [
   {
-    src: '/images/testi_1.webp',
+    src: '/images/Gallery_1.jpg',
     alt: 'Dekorasi outdoor garden party wedding',
   },
   {
-    src: '/images/testi_2.webp',
+    src: '/images/Gallery_2.jpg',
     alt: 'First dance romantic moment',
   },
   {
-    src: '/images/testi_3.webp',
+    src: '/images/Gallery_3.jpg',
     alt: 'Table setting elegant reception',
   },
   {
-    src: '/images/testi_4.webp',
+    src: '/images/Gallery_4.jpg',
     alt: 'Indoor ballroom decoration',
   },
   {
-    src: '/images/testi_5.webp',
+    src: '/images/Gallery_5.jpg',
     alt: 'Flower arrangement detail',
   },
   {
-    src: '/images/testi_6.webp',
+    src: '/images/Gallery_6.jpg',
     alt: 'Bride and groom portrait',
   },
   {
-    src: '/images/testi_7.webp',
+    src: '/images/Gallery_7.jpg',
     alt: 'Wedding ceremony moment',
   },
   {
-    src: '/images/testi_8.webp',
+    src: '/images/Gallery_8.jpg',
     alt: 'Wedding cake display',
   },
   {
-    src: '/images/teti_9.webp',
+    src: '/images/Gallery_9.jpg',
     alt: 'Guest celebration moment',
   },
   {
-    src: '/images/testi_10.webp',
+    src: '/images/Gallery_10.jpg',
     alt: 'Happy couple walking',
   },
   {
-    src: '/images/hero_kanan.webp',
+    src: '/images/Gallery_11.jpg',
     alt: 'Happy couple walking',
   },
   {
-    src: '/images/proses_1.webp',
+    src: '/images/Gallery_12.jpg',
+    alt: 'Happy couple walking',
+  },
+  {
+    src: '/images/Gallery_13.jpg',
     alt: 'Happy couple walking',
   },
 
