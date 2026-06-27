@@ -7,7 +7,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const galleryImages = [
   {
-    src: '/images/testi_1.webp',
+    src: '/images/Gallery_1.webp',
     alt: 'Dekorasi outdoor garden party wedding',
   },
   {
