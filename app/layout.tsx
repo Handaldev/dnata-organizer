@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'wedding planner profesional',
     'Dinata Organizer',
     'CV Dinata Kreatif Group',
+    'Handal Innovation',
   ],
   openGraph: {
     title: 'Dinata Organizer – Wedding Planner & Event Organizer Profesional',
