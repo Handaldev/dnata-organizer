@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Dinata Organizer – Wedding Planner & Event Organizer Profesional',
   description:
-    'Dinata Organizer adalah Wedding and Event Organizer profesional dengan pengalaman 7 tahun dan lebih dari 200 klien. Layanan Personalized Wedding Planner untuk hari istimewa Anda.',
+    'Dinata Organizer adalah Wedding and Event Organizer profesional dengan pengalaman 7 tahun dan lebih dari 200 klien. Layanan Personalized Wedding Planner untuk hari istimewa Anda. Proudly developed by Handal Innovation',
   keywords: [
     'wedding organizer',
     'wedding planner',
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'wedding planner profesional',
     'Dinata Organizer',
     'CV Dinata Kreatif Group',
+    'Handal Innovation',
   ],
   openGraph: {
     title: 'Dinata Organizer – Wedding Planner & Event Organizer Profesional',
